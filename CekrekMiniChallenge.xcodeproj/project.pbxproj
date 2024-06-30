@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D129EC92C2D5A3400DABB5B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D129EC82C2D5A3400DABB5B /* Card.swift */; };
+		0D129ED72C3138D300DABB5B /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D129ED62C3138D300DABB5B /* Onboarding1.swift */; };
+		0D129ED92C31391E00DABB5B /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D129ED82C31391E00DABB5B /* Onboarding2.swift */; };
 		AB3D31F72C2BF15100049334 /* CekrekMiniChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D31F62C2BF15100049334 /* CekrekMiniChallengeApp.swift */; };
 		AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D31F82C2BF15100049334 /* ContentView.swift */; };
 		AB3D31FB2C2BF15200049334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3D31FA2C2BF15200049334 /* Assets.xcassets */; };
@@ -15,7 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D129EC82C2D5A3400DABB5B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		0D129ED62C3138D300DABB5B /* Onboarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
+		0D129ED82C31391E00DABB5B /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 		AB3D31F32C2BF15100049334 /* CekrekMiniChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CekrekMiniChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3D31F62C2BF15100049334 /* CekrekMiniChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CekrekMiniChallengeApp.swift; sourceTree = "<group>"; };
 		AB3D31F82C2BF15100049334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +57,8 @@
 			children = (
 				AB3D31F62C2BF15100049334 /* CekrekMiniChallengeApp.swift */,
 				AB3D31F82C2BF15100049334 /* ContentView.swift */,
-				0D129EC82C2D5A3400DABB5B /* Card.swift */,
+				0D129ED62C3138D300DABB5B /* Onboarding1.swift */,
+				0D129ED82C31391E00DABB5B /* Onboarding2.swift */,
 				AB3D31FA2C2BF15200049334 /* Assets.xcassets */,
 				AB3D31FC2C2BF15200049334 /* Preview Content */,
 			);
@@ -140,8 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D129ED72C3138D300DABB5B /* Onboarding1.swift in Sources */,
+				0D129ED92C31391E00DABB5B /* Onboarding2.swift in Sources */,
 				AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */,
-				0D129EC92C2D5A3400DABB5B /* Card.swift in Sources */,
 				AB3D31F72C2BF15100049334 /* CekrekMiniChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
