@@ -60,11 +60,11 @@ struct Onboarding2: View {
                                 .padding(.top,70)
                         }
                         VStack{
-                            Button(action: {
-                                
-                            }, label: {
+                            NavigationLink{
+                               // Onboarding2()
+                            }  label: {
                                 Text("Get Started")
-                            })
+                            }
                             .padding(.vertical, 14)
                             .frame(width: 360, alignment: .center)
                             .background(Color(red: 0, green: 0.48, blue: 1))
@@ -75,8 +75,9 @@ struct Onboarding2: View {
                     .padding(.top,500)
                     
                 }
+                .navigationBarBackButtonHidden(true)
                 .frame(width: 393, height: 852)
-                .background(Color(red: 0.04, green: 0.52, blue: 1))
+                .background(Color(red: 0.2, green: 0.7, blue: 1))
             }
         }
     }
