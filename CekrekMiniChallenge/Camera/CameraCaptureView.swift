@@ -80,22 +80,80 @@ import Photos
 
 struct CameraCaptureView: View {
 //    @Binding var capturedImage : UIImage?
-    var camera = CameraService()
+    @StateObject var cameraService = CameraService()
     @State var capturedImage : UIImage? = nil
     @State var photoPreview : UIImage? = nil
     
     var body: some View {
         ZStack{
-//            CustomCameraView(capturedImage: $capturedImage, photoPreview: $photoPreview)
-//                .ignoresSafeArea()
-            CustomCameraView(capturedImage: $capturedImage)
+            CameraView(camera: cameraService)
+                .offset(y: -50)
+//                .padding(.top, 30)
+                .ignoresSafeArea()
+                
+            
+            ZStack {
+                VStack {
+                    Spacer()
+                    Button(action: {
+                        cameraService.capturePhoto()
+                    },label: {
+                        Circle()
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(.white)
+                            .overlay{
+                                Circle()
+                                    .stroke(.white, lineWidth: 5)
+                                    .frame(width: 75, height: 75)
+                            }
+                    })
+                }
+                
+                VStack {
+                    Spacer()
+                    HStack{
+                        Button(action: {
+                            cameraService.capturePhoto()
+                        },label: {
+                            if let capturedImage = capturedImage {
+                                Rectangle()
+                                    .frame(width: 60, height: 60)
+                                    .foregroundColor(.white)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    .mask(
+                                        Image(uiImage: capturedImage)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(height: 100)
+                                            .padding()
+                                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    )
+                            }else{
+                                Rectangle()
+                                    .frame(width: 60, height: 60)
+                                    .foregroundColor(.white)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                            }
+                        })
+                        .padding(.leading, 25)
+                        
+                        Spacer()
+                    }
+                }
+            }
+            .padding(.bottom, 25)
+        }
+        .onChange(of: cameraService.picData) {oldValue, newValue in
+            if let uiImage = UIImage(data: newValue) {
+                capturedImage = uiImage
+            }
         }
         .onChange(of: capturedImage){
             photoPreview = capturedImage
         }
         .onAppear(perform: {
             requestAuthorizationAndFetchPhotos()
-            camera.checkPermissions()
+            cameraService.checkPermissions()
         })
     }
     
@@ -143,5 +201,4 @@ struct CameraCaptureView: View {
 }
 #Preview {
     CameraCaptureView()
-//    CameraCaptureView(capturedImage: .constant(UIImage()))
 }

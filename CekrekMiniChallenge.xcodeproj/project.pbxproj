@@ -13,10 +13,8 @@
 		AB3D31FE2C2BF15200049334 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3D31FD2C2BF15200049334 /* Preview Assets.xcassets */; };
 		AB3D329A2C32827800049334 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D32992C32827800049334 /* CameraService.swift */; };
 		AB3D329C2C3282A100049334 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D329B2C3282A100049334 /* CameraView.swift */; };
-		AB3D329E2C3282C100049334 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D329D2C3282C100049334 /* CustomCameraView.swift */; };
 		AB3D32A02C32832400049334 /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D329F2C32832400049334 /* CameraCaptureView.swift */; };
 		AB3D32A42C32AAF800049334 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D32A32C32AAF800049334 /* PhotoModel.swift */; };
-		AB3D32A62C32FECA00049334 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D32A52C32FECA00049334 /* ImageSaver.swift */; };
 		AB3D32B72C33140500049334 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D32B62C33140500049334 /* CameraViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,10 +26,8 @@
 		AB3D31FD2C2BF15200049334 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AB3D32992C32827800049334 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		AB3D329B2C3282A100049334 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		AB3D329D2C3282C100049334 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		AB3D329F2C32832400049334 /* CameraCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCaptureView.swift; sourceTree = "<group>"; };
 		AB3D32A32C32AAF800049334 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
-		AB3D32A52C32FECA00049334 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		AB3D32B62C33140500049334 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +63,6 @@
 			children = (
 				AB3D32B52C3313ED00049334 /* View Models */,
 				AB3D32A22C32AAE900049334 /* Model */,
-				AB3D32A12C32A6F700049334 /* ImageSaver */,
 				AB3D32982C32825000049334 /* Camera */,
 				AB3D31F62C2BF15100049334 /* CekrekMiniChallengeApp.swift */,
 				AB3D31F82C2BF15100049334 /* ContentView.swift */,
@@ -90,18 +85,9 @@
 			children = (
 				AB3D32992C32827800049334 /* CameraService.swift */,
 				AB3D329B2C3282A100049334 /* CameraView.swift */,
-				AB3D329D2C3282C100049334 /* CustomCameraView.swift */,
 				AB3D329F2C32832400049334 /* CameraCaptureView.swift */,
 			);
 			path = Camera;
-			sourceTree = "<group>";
-		};
-		AB3D32A12C32A6F700049334 /* ImageSaver */ = {
-			isa = PBXGroup;
-			children = (
-				AB3D32A52C32FECA00049334 /* ImageSaver.swift */,
-			);
-			path = ImageSaver;
 			sourceTree = "<group>";
 		};
 		AB3D32A22C32AAE900049334 /* Model */ = {
@@ -193,11 +179,9 @@
 				AB3D32A02C32832400049334 /* CameraCaptureView.swift in Sources */,
 				AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */,
 				AB3D31F72C2BF15100049334 /* CekrekMiniChallengeApp.swift in Sources */,
-				AB3D329E2C3282C100049334 /* CustomCameraView.swift in Sources */,
 				AB3D32A42C32AAF800049334 /* PhotoModel.swift in Sources */,
 				AB3D329A2C32827800049334 /* CameraService.swift in Sources */,
 				AB3D329C2C3282A100049334 /* CameraView.swift in Sources */,
-				AB3D32A62C32FECA00049334 /* ImageSaver.swift in Sources */,
 				AB3D32B72C33140500049334 /* CameraViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
