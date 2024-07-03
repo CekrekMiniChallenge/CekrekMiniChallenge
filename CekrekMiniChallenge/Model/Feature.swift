@@ -1,8 +1,8 @@
 //
-//  FlashService.swift
+//  FeatureModel.swift
 //  CekrekMiniChallenge
 //
-//  Created by Fatakhillah Khaqo on 03/07/24.
+//  Created by Fatakhillah Khaqo on 04/07/24.
 //
 
 import Foundation
@@ -17,4 +17,16 @@ enum Features{
     case flash
     case timer
     case pose
+    case none
+}
+
+enum duration {
+    case off
+    case five
+    case ten
+}
+
+enum flash{
+    case off
+    case on
 }

@@ -17,6 +17,8 @@ struct CameraCaptureView: View {
     @State private var countdown: Int? = nil
     @State private var timer: Timer? = nil
     
+    @State private var currentFeature: Features = .none
+    
     var body: some View {
         ZStack{
             CameraView(camera: cameraService)
@@ -33,9 +35,14 @@ struct CameraCaptureView: View {
             ZStack {
                 VStack{
                     Spacer()
-                    CameraFeatureButton(featureActive: .flash)
-                        .padding(.bottom, 100)
+                    HStack{
+//                        CameraFeatureButton(featureActive: .flash, currentFeature: $currentFeature)
+//                        CameraFeatureButton(featureActive: .timer, currentFeature: $currentFeature)
+//                        CameraFeatureButton(featureActive: .pose, currentFeature: $currentFeature)
+                    }
+                        
                 }
+                .padding(.bottom, 100)
                 
                 VStack {
                     Spacer()

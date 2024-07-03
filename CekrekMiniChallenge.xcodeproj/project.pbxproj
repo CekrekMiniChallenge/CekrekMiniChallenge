@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB1B1A112C35352500C453D7 /* CameraFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1B1A102C35352500C453D7 /* CameraFeatures.swift */; };
-		AB1B1A132C35360200C453D7 /* CameraFeatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1B1A122C35360200C453D7 /* CameraFeatureButton.swift */; };
-		AB1B1A152C353A4300C453D7 /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1B1A142C353A4300C453D7 /* Testing.swift */; };
+		AB1B1A132C35360200C453D7 /* ExpandingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1B1A122C35360200C453D7 /* ExpandingButton.swift */; };
+		AB1B1A172C35978200C453D7 /* FeatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1B1A162C35978200C453D7 /* FeatureButton.swift */; };
+		AB1B1A192C35BBEC00C453D7 /* FlashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1B1A182C35BBEC00C453D7 /* FlashButton.swift */; };
+		AB1B1A1B2C35BE0900C453D7 /* TimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1B1A1A2C35BE0900C453D7 /* TimerButton.swift */; };
+		AB1B1A1D2C35C09300C453D7 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1B1A1C2C35C09300C453D7 /* Feature.swift */; };
 		AB3D31F72C2BF15100049334 /* CekrekMiniChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D31F62C2BF15100049334 /* CekrekMiniChallengeApp.swift */; };
 		AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D31F82C2BF15100049334 /* ContentView.swift */; };
 		AB3D31FB2C2BF15200049334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3D31FA2C2BF15200049334 /* Assets.xcassets */; };
@@ -17,14 +19,16 @@
 		AB3D329A2C32827800049334 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D32992C32827800049334 /* CameraService.swift */; };
 		AB3D329C2C3282A100049334 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D329B2C3282A100049334 /* CameraView.swift */; };
 		AB3D32A02C32832400049334 /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D329F2C32832400049334 /* CameraCaptureView.swift */; };
-		AB3D32A42C32AAF800049334 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D32A32C32AAF800049334 /* PhotoModel.swift */; };
+		AB3D32A42C32AAF800049334 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D32A32C32AAF800049334 /* Photo.swift */; };
 		AB3D32B72C33140500049334 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D32B62C33140500049334 /* CameraViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB1B1A102C35352500C453D7 /* CameraFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeatures.swift; sourceTree = "<group>"; };
-		AB1B1A122C35360200C453D7 /* CameraFeatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeatureButton.swift; sourceTree = "<group>"; };
-		AB1B1A142C353A4300C453D7 /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
+		AB1B1A122C35360200C453D7 /* ExpandingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingButton.swift; sourceTree = "<group>"; };
+		AB1B1A162C35978200C453D7 /* FeatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureButton.swift; sourceTree = "<group>"; };
+		AB1B1A182C35BBEC00C453D7 /* FlashButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashButton.swift; sourceTree = "<group>"; };
+		AB1B1A1A2C35BE0900C453D7 /* TimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButton.swift; sourceTree = "<group>"; };
+		AB1B1A1C2C35C09300C453D7 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		AB3D31F32C2BF15100049334 /* CekrekMiniChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CekrekMiniChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3D31F62C2BF15100049334 /* CekrekMiniChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CekrekMiniChallengeApp.swift; sourceTree = "<group>"; };
 		AB3D31F82C2BF15100049334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,7 +37,7 @@
 		AB3D32992C32827800049334 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		AB3D329B2C3282A100049334 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		AB3D329F2C32832400049334 /* CameraCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCaptureView.swift; sourceTree = "<group>"; };
-		AB3D32A32C32AAF800049334 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		AB3D32A32C32AAF800049334 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		AB3D32B62C33140500049334 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,9 +55,10 @@
 		AB1B1A0F2C3534CB00C453D7 /* CameraFeatures */ = {
 			isa = PBXGroup;
 			children = (
-				AB1B1A102C35352500C453D7 /* CameraFeatures.swift */,
-				AB1B1A122C35360200C453D7 /* CameraFeatureButton.swift */,
-				AB1B1A142C353A4300C453D7 /* Testing.swift */,
+				AB1B1A162C35978200C453D7 /* FeatureButton.swift */,
+				AB1B1A122C35360200C453D7 /* ExpandingButton.swift */,
+				AB1B1A182C35BBEC00C453D7 /* FlashButton.swift */,
+				AB1B1A1A2C35BE0900C453D7 /* TimerButton.swift */,
 			);
 			path = CameraFeatures;
 			sourceTree = "<group>";
@@ -110,7 +115,8 @@
 		AB3D32A22C32AAE900049334 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AB3D32A32C32AAF800049334 /* PhotoModel.swift */,
+				AB3D32A32C32AAF800049334 /* Photo.swift */,
+				AB1B1A1C2C35C09300C453D7 /* Feature.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,13 +200,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB3D32A02C32832400049334 /* CameraCaptureView.swift in Sources */,
+				AB1B1A192C35BBEC00C453D7 /* FlashButton.swift in Sources */,
 				AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */,
-				AB1B1A152C353A4300C453D7 /* Testing.swift in Sources */,
-				AB1B1A132C35360200C453D7 /* CameraFeatureButton.swift in Sources */,
+				AB1B1A132C35360200C453D7 /* ExpandingButton.swift in Sources */,
+				AB1B1A1D2C35C09300C453D7 /* Feature.swift in Sources */,
 				AB3D31F72C2BF15100049334 /* CekrekMiniChallengeApp.swift in Sources */,
-				AB3D32A42C32AAF800049334 /* PhotoModel.swift in Sources */,
-				AB1B1A112C35352500C453D7 /* CameraFeatures.swift in Sources */,
+				AB3D32A42C32AAF800049334 /* Photo.swift in Sources */,
+				AB1B1A172C35978200C453D7 /* FeatureButton.swift in Sources */,
 				AB3D329A2C32827800049334 /* CameraService.swift in Sources */,
+				AB1B1A1B2C35BE0900C453D7 /* TimerButton.swift in Sources */,
 				AB3D329C2C3282A100049334 /* CameraView.swift in Sources */,
 				AB3D32B72C33140500049334 /* CameraViewModel.swift in Sources */,
 			);

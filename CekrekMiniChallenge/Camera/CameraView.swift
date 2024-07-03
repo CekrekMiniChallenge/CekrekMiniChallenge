@@ -22,8 +22,11 @@ struct CameraView: UIViewRepresentable {
         camera.preview.frame = CGRect(x: 0, y: (UIScreen.main.bounds.height - viewHeight) / 2, width: screenWidth, height: viewHeight)
         camera.preview.videoGravity = .resizeAspectFill
         view.layer.addSublayer(camera.preview)
-        camera.session.startRunning()
-
+        
+        DispatchQueue.global(qos: .background) .async {
+            camera.session.startRunning()
+        }
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: context.coordinator, action: #selector(context.coordinator.handleTap(_:)))
         view.addGestureRecognizer(tapGestureRecognizer)
 
