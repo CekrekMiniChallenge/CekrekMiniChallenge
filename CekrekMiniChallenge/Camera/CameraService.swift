@@ -15,6 +15,8 @@ class CameraService: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     var preview = AVCaptureVideoPreviewLayer()
 
     @Published var picData: Data = Data()
+    @Published var photoCaptured: Bool = false
+    @Published var flashMode: AVCaptureDevice.FlashMode = .off
 
     override init() {
         super.init()
@@ -66,11 +68,23 @@ class CameraService: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     }
 
     func capturePhoto(with settings: AVCapturePhotoSettings = AVCapturePhotoSettings()) {
+        DispatchQueue.main.async {
+            self.photoCaptured = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.photoCaptured = false
+            }
+        }
         output.capturePhoto(with: settings, delegate: self)
     }
     
     func capturePhotoAfterDelay(seconds: Int) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(seconds)) {
+            DispatchQueue.main.async {
+                self.photoCaptured = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    self.photoCaptured = false
+                }
+            }
             self.capturePhoto()
         }
     }
@@ -80,7 +94,6 @@ class CameraService: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
             print("Error capturing photo: \(error.localizedDescription)")
             return
         }
-
         guard let imgData = photo.fileDataRepresentation() else { return }
         self.picData = imgData
         saveImage()

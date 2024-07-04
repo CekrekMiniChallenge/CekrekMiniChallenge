@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Photos
+import UIKit
 
 struct CameraCaptureView: View {
     @StateObject var cameraService = CameraService()
@@ -14,7 +15,9 @@ struct CameraCaptureView: View {
     @State var photoPreview : UIImage? = nil
     
     @State private var showFlash = false
+    
     @State private var countdown: Int? = nil
+    
     @State private var timer: Timer? = nil
     
     @State private var currentFeature: Features = .none
@@ -23,19 +26,42 @@ struct CameraCaptureView: View {
     @State private var timerCondition: Duration = .off
     @State private var poseShow: Bool = false
     
-    @State private var isTorchOn = false
+    @State private var isFlashOn = false
+    @State private var originalBrightness: CGFloat = UIScreen.main.brightness
     
     var body: some View {
         ZStack{
-            CameraView(camera: cameraService, isTorchOn: $isTorchOn)
+            CameraView(camera: cameraService)
                 .offset(y: -60)
                 .ignoresSafeArea()
             
-            if showFlash {
-                Color.white
+//            if showFlash {
+//                Color.white
+//                    .edgesIgnoringSafeArea(.all)
+//                    .opacity(showFlash ? 1 : 0)
+//                    .animation(.easeInOut(duration: 0.1), value: showFlash)
+//            }
+            
+            if cameraService.photoCaptured {
+                Color.black
+                    .opacity(0.5)
                     .edgesIgnoringSafeArea(.all)
-                    .opacity(showFlash ? 1 : 0)
-                    .animation(.easeInOut(duration: 0.1), value: showFlash)
+                    .transition(.opacity)
+                    .animation(.easeInOut(duration: 0.5))
+            }
+            
+            if let countdown = countdown {
+                VStack{
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Text("\(countdown)")
+                            .font(.title)
+                            .bold()
+                            .padding(.trailing, 15)
+                    }
+                }
+                .padding(.bottom, 200)
             }
             
             ZStack {
@@ -50,11 +76,41 @@ struct CameraCaptureView: View {
                     Spacer()
                     Button(action: {
                         if timerCondition == .off{
+                            if flashCondition == .on {
+                                withAnimation {
+                                    isFlashOn = true
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                    withAnimation {
+                                        isFlashOn = false
+                                    }
+                                }
+                            }
                             cameraService.capturePhoto()
                         }else if timerCondition == .five{
-                            cameraService.capturePhotoAfterDelay(seconds: 5)
+                            startCountdown(seconds: 5)
+                            if flashCondition == .on {
+                                withAnimation {
+                                    isFlashOn = true
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                    withAnimation {
+                                        isFlashOn = false
+                                    }
+                                }
+                            }
                         }else if timerCondition == .ten{
-                            cameraService.capturePhotoAfterDelay(seconds: 10)
+                            startCountdown(seconds: 10)
+                            if flashCondition == .on {
+                                withAnimation {
+                                    isFlashOn = true
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                    withAnimation {
+                                        isFlashOn = false
+                                    }
+                                }
+                            }
                         }
                     },label: {
                         Circle()
@@ -103,6 +159,18 @@ struct CameraCaptureView: View {
                 }
             }
             .padding(.bottom, 25)
+            
+            if isFlashOn {
+                Color.white
+                    .edgesIgnoringSafeArea(.all)
+                    .onAppear {
+                        originalBrightness = UIScreen.main.brightness
+                        UIScreen.main.brightness = CGFloat(1.0) // Set brightness to maximum
+                    }
+                    .onDisappear {
+                        UIScreen.main.brightness = originalBrightness // Restore original brightness
+                    }
+            }
         }
         .sheet(isPresented: $poseShow, content: {
             PoseModal()
@@ -116,13 +184,6 @@ struct CameraCaptureView: View {
         }
         .onChange(of: capturedImage){
             photoPreview = capturedImage
-        }
-        .onChange(of: flashCondition){
-            if flashCondition == .off {
-                isTorchOn = false
-            }else{
-                isTorchOn = true
-            }
         }
         .onAppear(perform: {
             requestAuthorizationAndFetchPhotos()
@@ -170,20 +231,18 @@ struct CameraCaptureView: View {
         }
     }
     
-    private func startCountdown() {
-        countdown = 5
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            if let countdown = countdown, countdown > 0 {
-                self.countdown = countdown - 1
-            } else {
-                timer.invalidate()
-                self.timer = nil
-                self.countdown = nil
-                triggerFlash()
-                cameraService.capturePhoto()
+    private func startCountdown(seconds: Int) {
+            countdown = seconds
+            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                if let currentCount = countdown, currentCount > 1 {
+                    countdown = currentCount - 1
+                } else {
+                    timer.invalidate()
+                    countdown = nil
+                    cameraService.capturePhoto()
+                }
             }
         }
-    }
 
     private func triggerFlash() {
         showFlash = true

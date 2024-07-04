@@ -10,7 +10,6 @@ import AVFoundation
 
 struct CameraView: UIViewRepresentable {
     var camera: CameraService
-    @Binding var isTorchOn: Bool
 
     func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: UIScreen.main.bounds)

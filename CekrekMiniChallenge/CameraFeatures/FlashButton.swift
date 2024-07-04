@@ -34,6 +34,7 @@ struct FlashButton: View {
                         isExpanded.toggle()
                         isFlashActive = true
                         currentFeature = .none
+                        currentFlash = .on
                     }
                 } label: {
                     Text("On")
@@ -45,6 +46,7 @@ struct FlashButton: View {
                         isExpanded.toggle()
                         isFlashActive = false
                         currentFeature = .none
+                        currentFlash = .off
                     }
                 } label: {
                     Text("Off")
