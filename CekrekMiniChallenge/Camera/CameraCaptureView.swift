@@ -19,9 +19,15 @@ struct CameraCaptureView: View {
     
     @State private var currentFeature: Features = .none
     
+    @State private var flashCondition: Flash = .off
+    @State private var timerCondition: Duration = .off
+    @State private var poseShow: Bool = false
+    
+    @State private var isTorchOn = false
+    
     var body: some View {
         ZStack{
-            CameraView(camera: cameraService)
+            CameraView(camera: cameraService, isTorchOn: $isTorchOn)
                 .offset(y: -60)
                 .ignoresSafeArea()
             
@@ -35,11 +41,7 @@ struct CameraCaptureView: View {
             ZStack {
                 VStack{
                     Spacer()
-                    HStack{
-//                        CameraFeatureButton(featureActive: .flash, currentFeature: $currentFeature)
-//                        CameraFeatureButton(featureActive: .timer, currentFeature: $currentFeature)
-//                        CameraFeatureButton(featureActive: .pose, currentFeature: $currentFeature)
-                    }
+                    FeaturesButtonView(poseShow: $poseShow, currentFlash: $flashCondition, currentDuration: $timerCondition)
                         
                 }
                 .padding(.bottom, 100)
@@ -47,7 +49,13 @@ struct CameraCaptureView: View {
                 VStack {
                     Spacer()
                     Button(action: {
-                        cameraService.capturePhoto()
+                        if timerCondition == .off{
+                            cameraService.capturePhoto()
+                        }else if timerCondition == .five{
+                            cameraService.capturePhotoAfterDelay(seconds: 5)
+                        }else if timerCondition == .ten{
+                            cameraService.capturePhotoAfterDelay(seconds: 10)
+                        }
                     },label: {
                         Circle()
                             .frame(width: 60, height: 60)
@@ -87,15 +95,6 @@ struct CameraCaptureView: View {
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
                                 }
                             }
-//                            
-//                            Color.clear
-//                                .frame(width: 60, height: 60)
-//                                .overlay(
-//                                    Image(.logos)
-//                                        .resizable()
-//                                        .scaledToFill()
-//                                )
-//                                .clipShape(RoundedRectangle(cornerRadius: 10))
                         })
                         .padding(.leading, 25)
                         
@@ -105,6 +104,10 @@ struct CameraCaptureView: View {
             }
             .padding(.bottom, 25)
         }
+        .sheet(isPresented: $poseShow, content: {
+            PoseModal()
+                .presentationDetents([.fraction(0.25)])
+        })
         .background(.black)
         .onChange(of: cameraService.picData) {oldValue, newValue in
             if let uiImage = UIImage(data: newValue) {
@@ -113,6 +116,13 @@ struct CameraCaptureView: View {
         }
         .onChange(of: capturedImage){
             photoPreview = capturedImage
+        }
+        .onChange(of: flashCondition){
+            if flashCondition == .off {
+                isTorchOn = false
+            }else{
+                isTorchOn = true
+            }
         }
         .onAppear(perform: {
             requestAuthorizationAndFetchPhotos()

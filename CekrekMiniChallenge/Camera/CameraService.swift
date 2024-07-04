@@ -68,6 +68,12 @@ class CameraService: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     func capturePhoto(with settings: AVCapturePhotoSettings = AVCapturePhotoSettings()) {
         output.capturePhoto(with: settings, delegate: self)
     }
+    
+    func capturePhotoAfterDelay(seconds: Int) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(seconds)) {
+            self.capturePhoto()
+        }
+    }
 
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if let error = error {

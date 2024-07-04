@@ -20,13 +20,13 @@ enum Features{
     case none
 }
 
-enum duration {
+enum Duration {
     case off
     case five
     case ten
 }
 
-enum flash{
+enum Flash{
     case off
     case on
 }

@@ -11,32 +11,37 @@ struct TimerButton: View {
     @State var isTimerActive = false
     @State var isExpanded = false
     
-    @State var currentDuration : duration = .off
+    @Binding var currentFeature : Features
     
+    @Binding var currentDuration : Duration
+
     var body: some View {
         HStack{
             if isExpanded{
                 Image(systemName: "timer")
-                    .foregroundStyle(isTimerActive ? .yellow : .black)
+                    .foregroundStyle(isTimerActive ? .yellow : .white)
                     .font(.title)
                     .padding(.leading, 5)
                     .onTapGesture {
                         withAnimation{
                             isExpanded.toggle()
+                            currentFeature = .none
                         }
                     }
                 
-                Spacer().frame(width: 50)
+                Spacer().frame(width: 40)
                 
                 Button {
                     withAnimation{
                         isExpanded.toggle()
                         isTimerActive = false
                         currentDuration = .off
+                        currentFeature = .none
                     }
                 } label: {
                     Text("Off")
-                    Spacer().frame(width: 50)
+                        .foregroundStyle(.white)
+                    Spacer().frame(width: 30)
                 }
                 
                 Button {
@@ -44,11 +49,12 @@ struct TimerButton: View {
                         isExpanded.toggle()
                         isTimerActive = true
                         currentDuration = .five
+                        currentFeature = .none
                     }
                 } label: {
                     Text("5s")
-                        .foregroundStyle(currentDuration == .five ? .yellow : .black)
-                    Spacer().frame(width: 50)
+                        .foregroundStyle(currentDuration == .five ? .yellow : .white)
+                    Spacer().frame(width: 40)
                 }
                 
                 Button {
@@ -56,33 +62,43 @@ struct TimerButton: View {
                         isExpanded.toggle()
                         isTimerActive = true
                         currentDuration = .ten
+                        currentFeature = .none
                     }
                 } label: {
                     Text("10s")
-                        .foregroundStyle(currentDuration == .ten ? .yellow : .black)
+                        .foregroundStyle(currentDuration == .ten ? .yellow : .white)
                         .padding(.trailing, 5)
                 }
             }else{
                 Image(systemName: "timer")
-                    .foregroundStyle(isTimerActive ? .yellow : .black)
+                    .foregroundStyle(isTimerActive ? .yellow : .white)
                     .font(.title)
                     .frame(width: 30, height: 30)
                     .onTapGesture {
                         withAnimation{
                             isExpanded.toggle()
+                            currentFeature = .timer
                         }
                     }
             }
         }
         .frame(height: 30)
         .padding(10)
-        .background(.black.opacity(0.5))
-        .foregroundColor(.black)
+        .background(.white.opacity(0.5))
         .clipShape(RoundedRectangle(cornerRadius: 25))
         .animation(.spring(), value: isExpanded)
+        .onChange(of: currentFeature){
+            withAnimation{
+                if currentFeature == .timer{
+                    isExpanded = true
+                }else{
+                    isExpanded = false
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    TimerButton()
+    TimerButton(currentFeature: .constant(.timer), currentDuration: .constant(.off))
 }

@@ -10,6 +10,7 @@ import AVFoundation
 
 struct CameraView: UIViewRepresentable {
     var camera: CameraService
+    @Binding var isTorchOn: Bool
 
     func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: UIScreen.main.bounds)
@@ -33,7 +34,9 @@ struct CameraView: UIViewRepresentable {
         return view
     }
 
-    func updateUIView(_ uiView: UIView, context: Context) {}
+    func updateUIView(_ uiView: UIView, context: Context) {
+//        context.coordinator.updateTorch(isTorchOn: isTorchOn)
+    }
 
     func makeCoordinator() -> Coordinator {
         return Coordinator(self)
@@ -41,6 +44,8 @@ struct CameraView: UIViewRepresentable {
 
     class Coordinator: NSObject {
         var parent: CameraView
+        var captureSession: AVCaptureSession?
+        var frontCamera: AVCaptureDevice?
 
         init(_ parent: CameraView) {
             self.parent = parent
