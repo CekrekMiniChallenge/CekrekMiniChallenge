@@ -24,7 +24,7 @@ struct Onboarding1: View {
                     VStack{
                         Rectangle()
                             .foregroundColor(.clear)
-                            .frame(height: 725)
+                            .frame(height: 620)
                             .background(
                                 Image("Onboarding1")
                                     .resizable()
@@ -37,12 +37,12 @@ struct Onboarding1: View {
                         Spacer()
                         Rectangle()
                             .foregroundColor(.clear)
-                            .frame(width: 394, height: 643)
+                            .frame(width: 394, height: 700)
                             .background(
                                 LinearGradient(
                                     stops: [
                                         Gradient.Stop(color: .black.opacity(0), location: 0.00),
-                                        Gradient.Stop(color: .black, location: 0.68),
+                                        Gradient.Stop(color: .black, location: 0.67),
                                     ],
                                     startPoint: UnitPoint(x: 0.5, y: 0),
                                     endPoint: UnitPoint(x: 0.5, y: 1)
@@ -67,9 +67,9 @@ struct Onboarding1: View {
                             }
                             .padding(.vertical, 14)
                             .frame(width: 360, alignment: .center)
-                            .background(Color(red: 0, green: 0.48, blue: 1))
+                            .background(Color(red: 64/225, green: 203/225, blue: 224/225))
                             .cornerRadius(12)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                         }.padding(.top, 35)
                     }
                     .padding(.top,500)
@@ -77,7 +77,7 @@ struct Onboarding1: View {
                 }
                 .navigationBarBackButtonHidden(true)
                 .frame(width: 393, height: 852)
-                .background(Color(red: 0.2, green: 0.7, blue: 1))
+                .background(Color(red: 64/255, green: 203/255, blue: 224/255))
             }
         }
         //        {

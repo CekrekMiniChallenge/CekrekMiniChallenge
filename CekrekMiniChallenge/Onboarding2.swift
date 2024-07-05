@@ -67,9 +67,9 @@ struct Onboarding2: View {
                             }
                             .padding(.vertical, 14)
                             .frame(width: 360, alignment: .center)
-                            .background(Color(red: 0, green: 0.48, blue: 1))
+                            .background(Color(red: 64/255, green: 203/255, blue: 224/255))
                             .cornerRadius(12)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                         }.padding(.top, 35)
                     }
                     .padding(.top,500)
@@ -77,7 +77,7 @@ struct Onboarding2: View {
                 }
                 .navigationBarBackButtonHidden(true)
                 .frame(width: 393, height: 852)
-                .background(Color(red: 0.2, green: 0.7, blue: 1))
+                .background(Color(red: 64/255, green: 203/255, blue: 224/255))
             }
         }
     }
