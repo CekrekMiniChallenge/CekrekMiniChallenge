@@ -18,6 +18,10 @@
 		AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D31F82C2BF15100049334 /* ContentView.swift */; };
 		AB3D31FB2C2BF15200049334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3D31FA2C2BF15200049334 /* Assets.xcassets */; };
 		AB3D31FE2C2BF15200049334 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3D31FD2C2BF15200049334 /* Preview Assets.xcassets */; };
+		AB3D329A2C32827800049334 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D32992C32827800049334 /* CameraService.swift */; };
+		AB3D329C2C3282A100049334 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D329B2C3282A100049334 /* CameraView.swift */; };
+		AB3D32A02C32832400049334 /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D329F2C32832400049334 /* CameraCaptureView.swift */; };
+		AB3D32A42C32AAF800049334 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D32A32C32AAF800049334 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		AB3D31F82C2BF15100049334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AB3D31FA2C2BF15200049334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB3D31FD2C2BF15200049334 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AB3D32992C32827800049334 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		AB3D329B2C3282A100049334 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		AB3D329F2C32832400049334 /* CameraCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCaptureView.swift; sourceTree = "<group>"; };
+		AB3D32A32C32AAF800049334 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,25 @@
 				AB3D31FD2C2BF15200049334 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB3D32982C32825000049334 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				AB3D32992C32827800049334 /* CameraService.swift */,
+				AB3D329B2C3282A100049334 /* CameraView.swift */,
+				AB3D329F2C32832400049334 /* CameraCaptureView.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		AB3D32A22C32AAE900049334 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB3D32A32C32AAF800049334 /* Photo.swift */,
+				AB1B1A1C2C35C09300C453D7 /* Feature.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +346,9 @@
 				DEVELOPMENT_TEAM = L62ZSF9D69;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -348,6 +378,9 @@
 				DEVELOPMENT_TEAM = L62ZSF9D69;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
