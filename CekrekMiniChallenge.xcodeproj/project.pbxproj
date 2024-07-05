@@ -18,10 +18,16 @@
 		AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D31F82C2BF15100049334 /* ContentView.swift */; };
 		AB3D31FB2C2BF15200049334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3D31FA2C2BF15200049334 /* Assets.xcassets */; };
 		AB3D31FE2C2BF15200049334 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3D31FD2C2BF15200049334 /* Preview Assets.xcassets */; };
-		AB3D329A2C32827800049334 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D32992C32827800049334 /* CameraService.swift */; };
-		AB3D329C2C3282A100049334 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D329B2C3282A100049334 /* CameraView.swift */; };
-		AB3D32A02C32832400049334 /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D329F2C32832400049334 /* CameraCaptureView.swift */; };
-		AB3D32A42C32AAF800049334 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D32A32C32AAF800049334 /* Photo.swift */; };
+		ABBDB8732C37EB9A00C745D3 /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8652C37EB9A00C745D3 /* CameraCaptureView.swift */; };
+		ABBDB8742C37EB9A00C745D3 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8662C37EB9A00C745D3 /* CameraService.swift */; };
+		ABBDB8752C37EB9A00C745D3 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8672C37EB9A00C745D3 /* CameraView.swift */; };
+		ABBDB8762C37EB9A00C745D3 /* FeaturesButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8692C37EB9A00C745D3 /* FeaturesButtonView.swift */; };
+		ABBDB8772C37EB9A00C745D3 /* FlashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB86A2C37EB9A00C745D3 /* FlashButton.swift */; };
+		ABBDB8782C37EB9A00C745D3 /* PoseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB86B2C37EB9A00C745D3 /* PoseButton.swift */; };
+		ABBDB8792C37EB9A00C745D3 /* TimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB86C2C37EB9A00C745D3 /* TimerButton.swift */; };
+		ABBDB87A2C37EB9A00C745D3 /* PoseModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB86E2C37EB9A00C745D3 /* PoseModal.swift */; };
+		ABBDB87B2C37EB9A00C745D3 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8702C37EB9A00C745D3 /* Feature.swift */; };
+		ABBDB87C2C37EB9A00C745D3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8712C37EB9A00C745D3 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,10 +43,16 @@
 		AB3D31F82C2BF15100049334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AB3D31FA2C2BF15200049334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB3D31FD2C2BF15200049334 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AB3D32992C32827800049334 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
-		AB3D329B2C3282A100049334 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		AB3D329F2C32832400049334 /* CameraCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCaptureView.swift; sourceTree = "<group>"; };
-		AB3D32A32C32AAF800049334 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		ABBDB8652C37EB9A00C745D3 /* CameraCaptureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCaptureView.swift; sourceTree = "<group>"; };
+		ABBDB8662C37EB9A00C745D3 /* CameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		ABBDB8672C37EB9A00C745D3 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		ABBDB8692C37EB9A00C745D3 /* FeaturesButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturesButtonView.swift; sourceTree = "<group>"; };
+		ABBDB86A2C37EB9A00C745D3 /* FlashButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashButton.swift; sourceTree = "<group>"; };
+		ABBDB86B2C37EB9A00C745D3 /* PoseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseButton.swift; sourceTree = "<group>"; };
+		ABBDB86C2C37EB9A00C745D3 /* TimerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerButton.swift; sourceTree = "<group>"; };
+		ABBDB86E2C37EB9A00C745D3 /* PoseModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseModal.swift; sourceTree = "<group>"; };
+		ABBDB8702C37EB9A00C745D3 /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		ABBDB8712C37EB9A00C745D3 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,10 @@
 		AB3D31F52C2BF15100049334 /* CekrekMiniChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				ABBDB8682C37EB9A00C745D3 /* Camera */,
+				ABBDB86D2C37EB9A00C745D3 /* CameraFeatures */,
+				ABBDB8722C37EB9A00C745D3 /* Model */,
+				ABBDB86F2C37EB9A00C745D3 /* Poses */,
 				9F6E3FDA2C359E60006DC145 /* components */,
 				9F6E3FDE2C35A19B006DC145 /* onboarding */,
 				AB3D31F62C2BF15100049334 /* CekrekMiniChallengeApp.swift */,
@@ -112,21 +128,40 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		AB3D32982C32825000049334 /* Camera */ = {
+		ABBDB8682C37EB9A00C745D3 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
-				AB3D32992C32827800049334 /* CameraService.swift */,
-				AB3D329B2C3282A100049334 /* CameraView.swift */,
-				AB3D329F2C32832400049334 /* CameraCaptureView.swift */,
+				ABBDB8652C37EB9A00C745D3 /* CameraCaptureView.swift */,
+				ABBDB8662C37EB9A00C745D3 /* CameraService.swift */,
+				ABBDB8672C37EB9A00C745D3 /* CameraView.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
 		};
-		AB3D32A22C32AAE900049334 /* Model */ = {
+		ABBDB86D2C37EB9A00C745D3 /* CameraFeatures */ = {
 			isa = PBXGroup;
 			children = (
-				AB3D32A32C32AAF800049334 /* Photo.swift */,
-				AB1B1A1C2C35C09300C453D7 /* Feature.swift */,
+				ABBDB8692C37EB9A00C745D3 /* FeaturesButtonView.swift */,
+				ABBDB86A2C37EB9A00C745D3 /* FlashButton.swift */,
+				ABBDB86B2C37EB9A00C745D3 /* PoseButton.swift */,
+				ABBDB86C2C37EB9A00C745D3 /* TimerButton.swift */,
+			);
+			path = CameraFeatures;
+			sourceTree = "<group>";
+		};
+		ABBDB86F2C37EB9A00C745D3 /* Poses */ = {
+			isa = PBXGroup;
+			children = (
+				ABBDB86E2C37EB9A00C745D3 /* PoseModal.swift */,
+			);
+			path = Poses;
+			sourceTree = "<group>";
+		};
+		ABBDB8722C37EB9A00C745D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABBDB8702C37EB9A00C745D3 /* Feature.swift */,
+				ABBDB8712C37EB9A00C745D3 /* Photo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,14 +236,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABBDB8742C37EB9A00C745D3 /* CameraService.swift in Sources */,
 				9F6E3FE42C35AA5F006DC145 /* StrongCharacter.swift in Sources */,
 				9F6E3FE82C35AB7C006DC145 /* GenuineCharacter.swift in Sources */,
+				ABBDB8752C37EB9A00C745D3 /* CameraView.swift in Sources */,
 				9F6E3FE62C35AAEC006DC145 /* FriendlyCharacter.swift in Sources */,
+				ABBDB8782C37EB9A00C745D3 /* PoseButton.swift in Sources */,
+				ABBDB87B2C37EB9A00C745D3 /* Feature.swift in Sources */,
 				9F6E3FEA2C35AEB9006DC145 /* FourCharacter.swift in Sources */,
 				AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */,
 				9F6E3FE22C35A854006DC145 /* ConfidentCharacter.swift in Sources */,
+				ABBDB8792C37EB9A00C745D3 /* TimerButton.swift in Sources */,
+				ABBDB8772C37EB9A00C745D3 /* FlashButton.swift in Sources */,
+				ABBDB87C2C37EB9A00C745D3 /* Photo.swift in Sources */,
+				ABBDB8762C37EB9A00C745D3 /* FeaturesButtonView.swift in Sources */,
 				AB3D31F72C2BF15100049334 /* CekrekMiniChallengeApp.swift in Sources */,
 				9F6E3FDC2C359FCA006DC145 /* ButtonView.swift in Sources */,
+				ABBDB8732C37EB9A00C745D3 /* CameraCaptureView.swift in Sources */,
+				ABBDB87A2C37EB9A00C745D3 /* PoseModal.swift in Sources */,
 				9F6E3FE02C35A233006DC145 /* OBcharacterDummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
