@@ -30,6 +30,44 @@
 		ABBDB87C2C37EB9A00C745D3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8712C37EB9A00C745D3 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0DDA43492C373FFA00D27951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB3D31EB2C2BF15100049334 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DDA43382C373FF900D27951;
+			remoteInfo = "CekrekWatch Watch App";
+		};
+		0DDA43532C373FFA00D27951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB3D31EB2C2BF15100049334 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DDA43382C373FF900D27951;
+			remoteInfo = "CekrekWatch Watch App";
+		};
+		0DDA435A2C373FFA00D27951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB3D31EB2C2BF15100049334 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DDA43382C373FF900D27951;
+			remoteInfo = "CekrekWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0DDA43602C373FFA00D27951 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0DDA435C2C373FFA00D27951 /* CekrekWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9F6E3FDB2C359FCA006DC145 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		9F6E3FDF2C35A233006DC145 /* OBcharacterDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBcharacterDummy.swift; sourceTree = "<group>"; };
@@ -56,6 +94,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0DDA43362C373FF900D27951 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDA43452C373FFA00D27951 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDA434F2C373FFA00D27951 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AB3D31F02C2BF15100049334 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -91,6 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				AB3D31F52C2BF15100049334 /* CekrekMiniChallenge */,
+				0DDA433A2C373FF900D27951 /* CekrekWatch Watch App */,
+				0DDA434B2C373FFA00D27951 /* CekrekWatch Watch AppTests */,
+				0DDA43552C373FFA00D27951 /* CekrekWatch Watch AppUITests */,
 				AB3D31F42C2BF15100049334 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				AB3D31F32C2BF15100049334 /* CekrekMiniChallenge.app */,
+				0DDA43392C373FF900D27951 /* CekrekWatch Watch App.app */,
+				0DDA43482C373FFA00D27951 /* CekrekWatch Watch AppTests.xctest */,
+				0DDA43522C373FFA00D27951 /* CekrekWatch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,6 +234,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0DDA43382C373FF900D27951 /* CekrekWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DDA435D2C373FFA00D27951 /* Build configuration list for PBXNativeTarget "CekrekWatch Watch App" */;
+			buildPhases = (
+				0DDA43352C373FF900D27951 /* Sources */,
+				0DDA43362C373FF900D27951 /* Frameworks */,
+				0DDA43372C373FF900D27951 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CekrekWatch Watch App";
+			productName = "CekrekWatch Watch App";
+			productReference = 0DDA43392C373FF900D27951 /* CekrekWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0DDA43472C373FFA00D27951 /* CekrekWatch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DDA43612C373FFA00D27951 /* Build configuration list for PBXNativeTarget "CekrekWatch Watch AppTests" */;
+			buildPhases = (
+				0DDA43442C373FFA00D27951 /* Sources */,
+				0DDA43452C373FFA00D27951 /* Frameworks */,
+				0DDA43462C373FFA00D27951 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DDA434A2C373FFA00D27951 /* PBXTargetDependency */,
+			);
+			name = "CekrekWatch Watch AppTests";
+			productName = "CekrekWatch Watch AppTests";
+			productReference = 0DDA43482C373FFA00D27951 /* CekrekWatch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0DDA43512C373FFA00D27951 /* CekrekWatch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DDA43642C373FFA00D27951 /* Build configuration list for PBXNativeTarget "CekrekWatch Watch AppUITests" */;
+			buildPhases = (
+				0DDA434E2C373FFA00D27951 /* Sources */,
+				0DDA434F2C373FFA00D27951 /* Frameworks */,
+				0DDA43502C373FFA00D27951 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DDA43542C373FFA00D27951 /* PBXTargetDependency */,
+			);
+			name = "CekrekWatch Watch AppUITests";
+			productName = "CekrekWatch Watch AppUITests";
+			productReference = 0DDA43522C373FFA00D27951 /* CekrekWatch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		AB3D31F22C2BF15100049334 /* CekrekMiniChallenge */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB3D32012C2BF15200049334 /* Build configuration list for PBXNativeTarget "CekrekMiniChallenge" */;
@@ -176,10 +294,12 @@
 				AB3D31EF2C2BF15100049334 /* Sources */,
 				AB3D31F02C2BF15100049334 /* Frameworks */,
 				AB3D31F12C2BF15100049334 /* Resources */,
+				0DDA43602C373FFA00D27951 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0DDA435B2C373FFA00D27951 /* PBXTargetDependency */,
 			);
 			name = CekrekMiniChallenge;
 			productName = CekrekMiniChallenge;
@@ -193,9 +313,20 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					0DDA43382C373FF900D27951 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					0DDA43472C373FFA00D27951 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 0DDA43382C373FF900D27951;
+					};
+					0DDA43512C373FFA00D27951 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 0DDA43382C373FF900D27951;
+					};
 					AB3D31F22C2BF15100049334 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -215,11 +346,37 @@
 			projectRoot = "";
 			targets = (
 				AB3D31F22C2BF15100049334 /* CekrekMiniChallenge */,
+				0DDA43382C373FF900D27951 /* CekrekWatch Watch App */,
+				0DDA43472C373FFA00D27951 /* CekrekWatch Watch AppTests */,
+				0DDA43512C373FFA00D27951 /* CekrekWatch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0DDA43372C373FF900D27951 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDA43432C373FFA00D27951 /* Preview Assets.xcassets in Resources */,
+				0DDA43402C373FFA00D27951 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDA43462C373FFA00D27951 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDA43502C373FFA00D27951 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AB3D31F12C2BF15100049334 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +389,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0DDA43352C373FF900D27951 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDA433E2C373FF900D27951 /* ContentView.swift in Sources */,
+				0DDA436A2C3740B400D27951 /* WatchConnectivityManager.swift in Sources */,
+				0DDA433C2C373FF900D27951 /* CekrekWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDA43442C373FFA00D27951 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDA434D2C373FFA00D27951 /* CekrekWatch_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DDA434E2C373FFA00D27951 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DDA43572C373FFA00D27951 /* CekrekWatch_Watch_AppUITests.swift in Sources */,
+				0DDA43592C373FFA00D27951 /* CekrekWatch_Watch_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AB3D31EF2C2BF15100049334 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,7 +444,167 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0DDA434A2C373FFA00D27951 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DDA43382C373FF900D27951 /* CekrekWatch Watch App */;
+			targetProxy = 0DDA43492C373FFA00D27951 /* PBXContainerItemProxy */;
+		};
+		0DDA43542C373FFA00D27951 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DDA43382C373FF900D27951 /* CekrekWatch Watch App */;
+			targetProxy = 0DDA43532C373FFA00D27951 /* PBXContainerItemProxy */;
+		};
+		0DDA435B2C373FFA00D27951 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DDA43382C373FF900D27951 /* CekrekWatch Watch App */;
+			targetProxy = 0DDA435A2C373FFA00D27951 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0DDA435E2C373FFA00D27951 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CekrekWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = F7UK99A97Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CekrekWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.bimbim.CekrekMiniChallenge;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bimbim.CekrekMiniChallenge.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		0DDA435F2C373FFA00D27951 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CekrekWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = F7UK99A97Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CekrekWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.bimbim.CekrekMiniChallenge;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bimbim.CekrekMiniChallenge.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		0DDA43622C373FFA00D27951 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F7UK99A97Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nadyaangkawijaya.com.CekrekWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CekrekWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CekrekWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		0DDA43632C373FFA00D27951 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F7UK99A97Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nadyaangkawijaya.com.CekrekWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CekrekWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CekrekWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
+		0DDA43652C373FFA00D27951 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F7UK99A97Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nadyaangkawijaya.com.CekrekWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "CekrekWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		0DDA43662C373FFA00D27951 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F7UK99A97Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nadyaangkawijaya.com.CekrekWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "CekrekWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 		AB3D31FF2C2BF15200049334 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -383,12 +727,13 @@
 		AB3D32022C2BF15200049334 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CekrekMiniChallenge/Preview Content\"";
-				DEVELOPMENT_TEAM = L62ZSF9D69;
+				DEVELOPMENT_TEAM = F7UK99A97Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -415,12 +760,13 @@
 		AB3D32032C2BF15200049334 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CekrekMiniChallenge/Preview Content\"";
-				DEVELOPMENT_TEAM = L62ZSF9D69;
+				DEVELOPMENT_TEAM = F7UK99A97Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -447,6 +793,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0DDA435D2C373FFA00D27951 /* Build configuration list for PBXNativeTarget "CekrekWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DDA435E2C373FFA00D27951 /* Debug */,
+				0DDA435F2C373FFA00D27951 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DDA43612C373FFA00D27951 /* Build configuration list for PBXNativeTarget "CekrekWatch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DDA43622C373FFA00D27951 /* Debug */,
+				0DDA43632C373FFA00D27951 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DDA43642C373FFA00D27951 /* Build configuration list for PBXNativeTarget "CekrekWatch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DDA43652C373FFA00D27951 /* Debug */,
+				0DDA43662C373FFA00D27951 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AB3D31EE2C2BF15100049334 /* Build configuration list for PBXProject "CekrekMiniChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
