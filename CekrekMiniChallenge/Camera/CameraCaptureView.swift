@@ -89,28 +89,28 @@ struct CameraCaptureView: View {
                             cameraService.capturePhoto()
                         }else if timerCondition == .five{
                             startCountdown(seconds: 5)
-                            if flashCondition == .on {
-                                withAnimation {
-                                    isFlashOn = true
-                                }
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                    withAnimation {
-                                        isFlashOn = false
-                                    }
-                                }
-                            }
+//                            if flashCondition == .on {
+//                                withAnimation {
+//                                    isFlashOn = true
+//                                }
+//                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//                                    withAnimation {
+//                                        isFlashOn = false
+//                                    }
+//                                }
+//                            }
                         }else if timerCondition == .ten{
                             startCountdown(seconds: 10)
-                            if flashCondition == .on {
-                                withAnimation {
-                                    isFlashOn = true
-                                }
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                    withAnimation {
-                                        isFlashOn = false
-                                    }
-                                }
-                            }
+//                            if flashCondition == .on {
+//                                withAnimation {
+//                                    isFlashOn = true
+//                                }
+//                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//                                    withAnimation {
+//                                        isFlashOn = false
+//                                    }
+//                                }
+//                            }
                         }
                     },label: {
                         Circle()
@@ -122,13 +122,18 @@ struct CameraCaptureView: View {
                                     .frame(width: 75, height: 75)
                             }
                     })
+                    .disabled(countdown != nil)
                 }
                 
                 VStack {
                     Spacer()
                     HStack{
                         Button(action: {
-
+                            if let url = URL(string: "photos-redirect://") {
+                                if UIApplication.shared.canOpenURL(url) {
+                                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                                }
+                            }
                         },label: {
                             if let capturedImage = capturedImage {
                                 Color.clear
@@ -239,6 +244,16 @@ struct CameraCaptureView: View {
                 } else {
                     timer.invalidate()
                     countdown = nil
+                    if flashCondition == .on {
+                        withAnimation {
+                            isFlashOn = true
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            withAnimation {
+                                isFlashOn = false
+                            }
+                        }
+                    }
                     cameraService.capturePhoto()
                 }
             }
