@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F6E3FDC2C359FCA006DC145 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E3FDB2C359FCA006DC145 /* ButtonView.swift */; };
+		9F6E3FE02C35A233006DC145 /* OBcharacterDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E3FDF2C35A233006DC145 /* OBcharacterDummy.swift */; };
+		9F6E3FE22C35A854006DC145 /* ConfidentCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E3FE12C35A854006DC145 /* ConfidentCharacter.swift */; };
+		9F6E3FE42C35AA5F006DC145 /* StrongCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E3FE32C35AA5F006DC145 /* StrongCharacter.swift */; };
+		9F6E3FE62C35AAEC006DC145 /* FriendlyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E3FE52C35AAEC006DC145 /* FriendlyCharacter.swift */; };
+		9F6E3FE82C35AB7C006DC145 /* GenuineCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E3FE72C35AB7C006DC145 /* GenuineCharacter.swift */; };
+		9F6E3FEA2C35AEB9006DC145 /* FourCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6E3FE92C35AEB9006DC145 /* FourCharacter.swift */; };
 		AB3D31F72C2BF15100049334 /* CekrekMiniChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D31F62C2BF15100049334 /* CekrekMiniChallengeApp.swift */; };
 		AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D31F82C2BF15100049334 /* ContentView.swift */; };
 		AB3D31FB2C2BF15200049334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3D31FA2C2BF15200049334 /* Assets.xcassets */; };
@@ -14,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F6E3FDB2C359FCA006DC145 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		9F6E3FDF2C35A233006DC145 /* OBcharacterDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBcharacterDummy.swift; sourceTree = "<group>"; };
+		9F6E3FE12C35A854006DC145 /* ConfidentCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfidentCharacter.swift; sourceTree = "<group>"; };
+		9F6E3FE32C35AA5F006DC145 /* StrongCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongCharacter.swift; sourceTree = "<group>"; };
+		9F6E3FE52C35AAEC006DC145 /* FriendlyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendlyCharacter.swift; sourceTree = "<group>"; };
+		9F6E3FE72C35AB7C006DC145 /* GenuineCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenuineCharacter.swift; sourceTree = "<group>"; };
+		9F6E3FE92C35AEB9006DC145 /* FourCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourCharacter.swift; sourceTree = "<group>"; };
 		AB3D31F32C2BF15100049334 /* CekrekMiniChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CekrekMiniChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3D31F62C2BF15100049334 /* CekrekMiniChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CekrekMiniChallengeApp.swift; sourceTree = "<group>"; };
 		AB3D31F82C2BF15100049334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +46,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F6E3FDA2C359E60006DC145 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				9F6E3FDB2C359FCA006DC145 /* ButtonView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		9F6E3FDE2C35A19B006DC145 /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9F6E3FDF2C35A233006DC145 /* OBcharacterDummy.swift */,
+				9F6E3FE12C35A854006DC145 /* ConfidentCharacter.swift */,
+				9F6E3FE32C35AA5F006DC145 /* StrongCharacter.swift */,
+				9F6E3FE52C35AAEC006DC145 /* FriendlyCharacter.swift */,
+				9F6E3FE72C35AB7C006DC145 /* GenuineCharacter.swift */,
+				9F6E3FE92C35AEB9006DC145 /* FourCharacter.swift */,
+			);
+			path = onboarding;
+			sourceTree = "<group>";
+		};
 		AB3D31EA2C2BF15100049334 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +86,8 @@
 		AB3D31F52C2BF15100049334 /* CekrekMiniChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				9F6E3FDA2C359E60006DC145 /* components */,
+				9F6E3FDE2C35A19B006DC145 /* onboarding */,
 				AB3D31F62C2BF15100049334 /* CekrekMiniChallengeApp.swift */,
 				AB3D31F82C2BF15100049334 /* ContentView.swift */,
 				AB3D31FA2C2BF15200049334 /* Assets.xcassets */,
@@ -137,8 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6E3FE42C35AA5F006DC145 /* StrongCharacter.swift in Sources */,
+				9F6E3FE82C35AB7C006DC145 /* GenuineCharacter.swift in Sources */,
+				9F6E3FE62C35AAEC006DC145 /* FriendlyCharacter.swift in Sources */,
+				9F6E3FEA2C35AEB9006DC145 /* FourCharacter.swift in Sources */,
 				AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */,
+				9F6E3FE22C35A854006DC145 /* ConfidentCharacter.swift in Sources */,
 				AB3D31F72C2BF15100049334 /* CekrekMiniChallengeApp.swift in Sources */,
+				9F6E3FDC2C359FCA006DC145 /* ButtonView.swift in Sources */,
+				9F6E3FE02C35A233006DC145 /* OBcharacterDummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
