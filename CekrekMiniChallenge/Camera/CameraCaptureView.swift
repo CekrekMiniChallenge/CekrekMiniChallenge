@@ -11,6 +11,8 @@ import UIKit
 
 struct CameraCaptureView: View {
     @StateObject var cameraService = CameraService()
+    @StateObject var watch = WatchConnectivityManager.shared
+
     @State var capturedImage : UIImage? = nil
     @State var photoPreview : UIImage? = nil
     
@@ -80,37 +82,56 @@ struct CameraCaptureView: View {
                                 withAnimation {
                                     isFlashOn = true
                                 }
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.7) {
                                     withAnimation {
+                                        capture()
                                         isFlashOn = false
                                     }
                                 }
                             }
-                            cameraService.capturePhoto()
+                           else if flashCondition == .off {
+                               capture()
+                            }
                         }else if timerCondition == .five{
                             startCountdown(seconds: 5)
                             if flashCondition == .on {
-                                withAnimation {
-                                    isFlashOn = true
-                                }
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 5 ) {
                                     withAnimation {
-                                        isFlashOn = false
+                                        isFlashOn = true
+                                        DispatchQueue.main.asyncAfter(deadline: .now()+1.9) {
+                                           withAnimation {
+                                               capture()
+                                                isFlashOn = false
+                                            }
+                                        }
                                     }
                                 }
                             }
+                            else if flashCondition == .off {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 5 ) {
+                                    capture()
+                                }
+                             }
                         }else if timerCondition == .ten{
                             startCountdown(seconds: 10)
                             if flashCondition == .on {
-                                withAnimation {
-                                    isFlashOn = true
-                                }
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 10 ) {
                                     withAnimation {
-                                        isFlashOn = false
+                                        isFlashOn = true
+                                        DispatchQueue.main.asyncAfter(deadline: .now()+1.9) {
+                                           withAnimation {
+                                               capture()
+                                                isFlashOn = false
+                                            }
+                                        }
                                     }
                                 }
                             }
+                            else if flashCondition == .off {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 10 ) {
+                                    capture()
+                                }
+                             }
                         }
                     },label: {
                         Circle()
@@ -185,6 +206,80 @@ struct CameraCaptureView: View {
         .onChange(of: capturedImage){
             photoPreview = capturedImage
         }
+        .onChange(of: watch.isCaptured){
+            if timerCondition == .off{
+                if flashCondition == .on {
+                    withAnimation {
+                        isFlashOn = true
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.7) {
+                        withAnimation {
+                            capture()
+                            isFlashOn = false
+                        }
+                    }
+                }
+               else if flashCondition == .off {
+                   capture()
+                }
+            }else if timerCondition == .five{
+                startCountdown(seconds: 5)
+                if flashCondition == .on {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5 ) {
+                        withAnimation {
+                            isFlashOn = true
+                            DispatchQueue.main.asyncAfter(deadline: .now()+1.9) {
+                               withAnimation {
+                                   capture()
+                                    isFlashOn = false
+                                }
+                            }
+                        }
+                    }
+                }
+                else if flashCondition == .off {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5 ) {
+                        capture()
+                    }
+                 }
+                    
+            }else if timerCondition == .ten{
+                startCountdown(seconds: 10)
+                if flashCondition == .on {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 10 ) {
+                        withAnimation {
+                            isFlashOn = true
+                            DispatchQueue.main.asyncAfter(deadline: .now()+1.9) {
+                               withAnimation {
+                                   capture()
+                                    isFlashOn = false
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if flashCondition == .off {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 10 ) {
+                    capture()
+                }
+             }
+
+        }
+        .onChange(of: watch.flash){
+            if watch.flash == true {
+                self.flashCondition = .on
+            } else if watch.flash == false {
+                self.flashCondition = .off
+            }
+        }
+        .onChange(of: watch.fiveSecTimer){
+            if watch.fiveSecTimer == true {
+                self.timerCondition = .five
+            } else if watch.fiveSecTimer == false {
+                self.timerCondition = .off
+            }
+        }
         .onAppear(perform: {
             requestAuthorizationAndFetchPhotos()
             cameraService.checkPermissions()
@@ -231,6 +326,10 @@ struct CameraCaptureView: View {
         }
     }
     
+    func capture(){
+        cameraService.capturePhoto()
+    }
+    
     private func startCountdown(seconds: Int) {
             countdown = seconds
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
@@ -239,7 +338,7 @@ struct CameraCaptureView: View {
                 } else {
                     timer.invalidate()
                     countdown = nil
-                    cameraService.capturePhoto()
+                    //cameraService.capturePhoto()
                 }
             }
         }
@@ -252,6 +351,7 @@ struct CameraCaptureView: View {
     }
     
 }
+
 #Preview {
     CameraCaptureView()
 }
