@@ -28,6 +28,14 @@
 		ABBDB87A2C37EB9A00C745D3 /* PoseModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB86E2C37EB9A00C745D3 /* PoseModal.swift */; };
 		ABBDB87B2C37EB9A00C745D3 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8702C37EB9A00C745D3 /* Feature.swift */; };
 		ABBDB87C2C37EB9A00C745D3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8712C37EB9A00C745D3 /* Photo.swift */; };
+		ABBDB87E2C37F65000C745D3 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB87D2C37F65000C745D3 /* WatchConnectivityManager.swift */; };
+		ABBDB88A2C37F6BD00C745D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABBDB87F2C37F6BD00C745D3 /* Preview Assets.xcassets */; };
+		ABBDB88B2C37F6BD00C745D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABBDB8812C37F6BD00C745D3 /* Assets.xcassets */; };
+		ABBDB88C2C37F6BD00C745D3 /* CekrekWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8822C37F6BD00C745D3 /* CekrekWatchApp.swift */; };
+		ABBDB88D2C37F6BD00C745D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8832C37F6BD00C745D3 /* ContentView.swift */; };
+		ABBDB88E2C37F6BD00C745D3 /* CekrekWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8852C37F6BD00C745D3 /* CekrekWatch_Watch_AppUITests.swift */; };
+		ABBDB88F2C37F6BD00C745D3 /* CekrekWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8862C37F6BD00C745D3 /* CekrekWatch_Watch_AppUITestsLaunchTests.swift */; };
+		ABBDB8902C37F6BD00C745D3 /* CekrekWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8882C37F6BD00C745D3 /* CekrekWatch_Watch_AppTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +69,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				0DDA435C2C373FFA00D27951 /* CekrekWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +98,14 @@
 		ABBDB86E2C37EB9A00C745D3 /* PoseModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseModal.swift; sourceTree = "<group>"; };
 		ABBDB8702C37EB9A00C745D3 /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		ABBDB8712C37EB9A00C745D3 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		ABBDB87D2C37F65000C745D3 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		ABBDB87F2C37F6BD00C745D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ABBDB8812C37F6BD00C745D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABBDB8822C37F6BD00C745D3 /* CekrekWatchApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CekrekWatchApp.swift; sourceTree = "<group>"; };
+		ABBDB8832C37F6BD00C745D3 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ABBDB8852C37F6BD00C745D3 /* CekrekWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CekrekWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		ABBDB8862C37F6BD00C745D3 /* CekrekWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CekrekWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ABBDB8882C37F6BD00C745D3 /* CekrekWatch_Watch_AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CekrekWatch_Watch_AppTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +164,10 @@
 		AB3D31EA2C2BF15100049334 = {
 			isa = PBXGroup;
 			children = (
+				ABBDB8842C37F6BD00C745D3 /* CekrekWatch Watch App */,
+				ABBDB8892C37F6BD00C745D3 /* CekrekWatch Watch AppTests */,
+				ABBDB8872C37F6BD00C745D3 /* CekrekWatch Watch AppUITests */,
 				AB3D31F52C2BF15100049334 /* CekrekMiniChallenge */,
-				0DDA433A2C373FF900D27951 /* CekrekWatch Watch App */,
-				0DDA434B2C373FFA00D27951 /* CekrekWatch Watch AppTests */,
-				0DDA43552C373FFA00D27951 /* CekrekWatch Watch AppUITests */,
 				AB3D31F42C2BF15100049334 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -161,9 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				AB3D31F32C2BF15100049334 /* CekrekMiniChallenge.app */,
-				0DDA43392C373FF900D27951 /* CekrekWatch Watch App.app */,
-				0DDA43482C373FFA00D27951 /* CekrekWatch Watch AppTests.xctest */,
-				0DDA43522C373FFA00D27951 /* CekrekWatch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,6 +183,7 @@
 		AB3D31F52C2BF15100049334 /* CekrekMiniChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				ABBDB87D2C37F65000C745D3 /* WatchConnectivityManager.swift */,
 				ABBDB8682C37EB9A00C745D3 /* Camera */,
 				ABBDB86D2C37EB9A00C745D3 /* CameraFeatures */,
 				ABBDB8722C37EB9A00C745D3 /* Model */,
@@ -231,6 +244,42 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		ABBDB8802C37F6BD00C745D3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ABBDB87F2C37F6BD00C745D3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ABBDB8842C37F6BD00C745D3 /* CekrekWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				ABBDB8802C37F6BD00C745D3 /* Preview Content */,
+				ABBDB8812C37F6BD00C745D3 /* Assets.xcassets */,
+				ABBDB8822C37F6BD00C745D3 /* CekrekWatchApp.swift */,
+				ABBDB8832C37F6BD00C745D3 /* ContentView.swift */,
+			);
+			path = "CekrekWatch Watch App";
+			sourceTree = "<group>";
+		};
+		ABBDB8872C37F6BD00C745D3 /* CekrekWatch Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ABBDB8852C37F6BD00C745D3 /* CekrekWatch_Watch_AppUITests.swift */,
+				ABBDB8862C37F6BD00C745D3 /* CekrekWatch_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "CekrekWatch Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		ABBDB8892C37F6BD00C745D3 /* CekrekWatch Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABBDB8882C37F6BD00C745D3 /* CekrekWatch_Watch_AppTests.swift */,
+			);
+			path = "CekrekWatch Watch AppTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,7 +297,6 @@
 			);
 			name = "CekrekWatch Watch App";
 			productName = "CekrekWatch Watch App";
-			productReference = 0DDA43392C373FF900D27951 /* CekrekWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0DDA43472C373FFA00D27951 /* CekrekWatch Watch AppTests */ = {
@@ -266,7 +314,6 @@
 			);
 			name = "CekrekWatch Watch AppTests";
 			productName = "CekrekWatch Watch AppTests";
-			productReference = 0DDA43482C373FFA00D27951 /* CekrekWatch Watch AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		0DDA43512C373FFA00D27951 /* CekrekWatch Watch AppUITests */ = {
@@ -284,7 +331,6 @@
 			);
 			name = "CekrekWatch Watch AppUITests";
 			productName = "CekrekWatch Watch AppUITests";
-			productReference = 0DDA43522C373FFA00D27951 /* CekrekWatch Watch AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		AB3D31F22C2BF15100049334 /* CekrekMiniChallenge */ = {
@@ -358,8 +404,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DDA43432C373FFA00D27951 /* Preview Assets.xcassets in Resources */,
-				0DDA43402C373FFA00D27951 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +426,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB3D31FE2C2BF15200049334 /* Preview Assets.xcassets in Resources */,
+				ABBDB88A2C37F6BD00C745D3 /* Preview Assets.xcassets in Resources */,
+				ABBDB88B2C37F6BD00C745D3 /* Assets.xcassets in Resources */,
 				AB3D31FB2C2BF15200049334 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,9 +439,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DDA433E2C373FF900D27951 /* ContentView.swift in Sources */,
-				0DDA436A2C3740B400D27951 /* WatchConnectivityManager.swift in Sources */,
-				0DDA433C2C373FF900D27951 /* CekrekWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +446,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DDA434D2C373FFA00D27951 /* CekrekWatch_Watch_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,8 +453,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DDA43572C373FFA00D27951 /* CekrekWatch_Watch_AppUITests.swift in Sources */,
-				0DDA43592C373FFA00D27951 /* CekrekWatch_Watch_AppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,18 +462,24 @@
 			files = (
 				ABBDB8742C37EB9A00C745D3 /* CameraService.swift in Sources */,
 				9F6E3FE42C35AA5F006DC145 /* StrongCharacter.swift in Sources */,
+				ABBDB88E2C37F6BD00C745D3 /* CekrekWatch_Watch_AppUITests.swift in Sources */,
 				9F6E3FE82C35AB7C006DC145 /* GenuineCharacter.swift in Sources */,
+				ABBDB88C2C37F6BD00C745D3 /* CekrekWatchApp.swift in Sources */,
 				ABBDB8752C37EB9A00C745D3 /* CameraView.swift in Sources */,
 				9F6E3FE62C35AAEC006DC145 /* FriendlyCharacter.swift in Sources */,
 				ABBDB8782C37EB9A00C745D3 /* PoseButton.swift in Sources */,
 				ABBDB87B2C37EB9A00C745D3 /* Feature.swift in Sources */,
+				ABBDB88F2C37F6BD00C745D3 /* CekrekWatch_Watch_AppUITestsLaunchTests.swift in Sources */,
 				9F6E3FEA2C35AEB9006DC145 /* FourCharacter.swift in Sources */,
 				AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */,
 				9F6E3FE22C35A854006DC145 /* ConfidentCharacter.swift in Sources */,
 				ABBDB8792C37EB9A00C745D3 /* TimerButton.swift in Sources */,
+				ABBDB88D2C37F6BD00C745D3 /* ContentView.swift in Sources */,
 				ABBDB8772C37EB9A00C745D3 /* FlashButton.swift in Sources */,
 				ABBDB87C2C37EB9A00C745D3 /* Photo.swift in Sources */,
 				ABBDB8762C37EB9A00C745D3 /* FeaturesButtonView.swift in Sources */,
+				ABBDB8902C37F6BD00C745D3 /* CekrekWatch_Watch_AppTests.swift in Sources */,
+				ABBDB87E2C37F65000C745D3 /* WatchConnectivityManager.swift in Sources */,
 				AB3D31F72C2BF15100049334 /* CekrekMiniChallengeApp.swift in Sources */,
 				9F6E3FDC2C359FCA006DC145 /* ButtonView.swift in Sources */,
 				ABBDB8732C37EB9A00C745D3 /* CameraCaptureView.swift in Sources */,
