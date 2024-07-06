@@ -13,6 +13,8 @@ struct ExpandableRoundedRectangle: View {
     let isExpanded: Bool
     let onTap: () -> Void
     
+    @Binding var valueSelected : Value
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
@@ -41,6 +43,18 @@ struct ExpandableRoundedRectangle: View {
             .animation(.easeInOut, value: isExpanded)
         }
         .onTapGesture {
+            switch title{
+            case "Confident":
+                valueSelected = .confident
+            case "Strong":
+                valueSelected = .strong
+            case "Friendly":
+                valueSelected = .friendly
+            case "Genuine":
+                valueSelected = .genuine
+            default:
+                break
+            }
             onTap()
         }
     }
@@ -48,6 +62,7 @@ struct ExpandableRoundedRectangle: View {
 
 struct OBcharacterDummy: View {
     @State private var expandedIndex: Int? = nil
+    @State var valueSelected : Value
     
     var body: some View {
         NavigationView {
@@ -55,9 +70,26 @@ struct OBcharacterDummy: View {
                 ZStack {
                     VStack {
                         ZStack {
+                            
                             VStack {
                                 LinearGradient(colors: [.blue, .black], startPoint: .top, endPoint: .center)
                             }
+                            
+                            VStack{
+                                if valueSelected == .confident{
+                                    Text("confident")
+                                }else if valueSelected == .friendly{
+                                    Text("friendly")
+                                }else if valueSelected == .genuine{
+                                    Text("genuine")
+                                }else if valueSelected == .strong{
+                                    Text("strong")
+                                }else{
+                                    Text("gtw")
+                                }
+                                Spacer()
+                            }
+                            
                             VStack {
                                 Spacer()
                                 Spacer()
@@ -75,7 +107,7 @@ struct OBcharacterDummy: View {
                                             withAnimation {
                                                 expandedIndex = (expandedIndex == 0) ? nil : 0
                                             }
-                                        }
+                                        }, valueSelected: $valueSelected
                                     )
                                     
                                     ExpandableRoundedRectangle(
@@ -86,7 +118,7 @@ struct OBcharacterDummy: View {
                                             withAnimation {
                                                 expandedIndex = (expandedIndex == 1) ? nil : 1
                                             }
-                                        }
+                                        }, valueSelected: $valueSelected
                                     )
                                     
                                     ExpandableRoundedRectangle(
@@ -97,7 +129,7 @@ struct OBcharacterDummy: View {
                                             withAnimation {
                                                 expandedIndex = (expandedIndex == 2) ? nil : 2
                                             }
-                                        }
+                                        }, valueSelected: $valueSelected
                                     )
                                     
                                     ExpandableRoundedRectangle(
@@ -108,13 +140,13 @@ struct OBcharacterDummy: View {
                                             withAnimation {
                                                 expandedIndex = (expandedIndex == 3) ? nil : 3
                                             }
-                                        }
+                                        }, valueSelected: $valueSelected
                                     )
                                 }
                                 Spacer()
                                 Spacer()
                                 if let expandedIndex = expandedIndex {
-                                    NavigationLink(destination: FourCharacter(initialTabIndex: expandedIndex).navigationBarBackButtonHidden(false)) {
+                                    NavigationLink(destination: FourCharacter(selectedIndex: expandedIndex, selectedPose: 0, valueSelected: valueSelected).navigationBarBackButtonHidden(false)) {
                                         Text("Next")
                                             .modifier(ButtonWhiteTextPurple())
                                     }
@@ -139,7 +171,7 @@ struct OBcharacterDummy: View {
 }
 
 #Preview {
-    OBcharacterDummy()
+    OBcharacterDummy(valueSelected: .confident)
 }
 
 

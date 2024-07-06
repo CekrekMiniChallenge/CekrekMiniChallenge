@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ConfidentCharacter: View {
     @State private var selectedImage: String = "Wanita1"
+    @Binding var selectedPose: Int
+    @Binding var selectedValue: Value
 
         var body: some View {
             NavigationStack{
@@ -52,6 +54,8 @@ struct ConfidentCharacter: View {
                                         .cornerRadius(5)
                                         .onTapGesture {
                                             selectedImage = "Wanita1"
+                                            selectedPose = 0
+                                            selectedValue = .confident
                                         }
                                 }
                                 Spacer()
@@ -63,6 +67,8 @@ struct ConfidentCharacter: View {
                                     .cornerRadius(5)
                                     .onTapGesture {
                                         selectedImage = "Wanita2"
+                                        selectedPose = 1
+                                        selectedValue = .confident
                                     }
                                 Spacer()
                                 Image("Wanita3")
@@ -73,6 +79,8 @@ struct ConfidentCharacter: View {
                                     .cornerRadius(5)
                                     .onTapGesture {
                                         selectedImage = "Wanita3"
+                                        selectedPose = 2
+                                        selectedValue = .confident
                                     }
                             }
                             Text("Simply stand straight and look directly at the camera with a neutral expression.")
@@ -98,5 +106,5 @@ struct ConfidentCharacter: View {
 }
 
 #Preview {
-    ConfidentCharacter()
+    ConfidentCharacter(selectedPose: .constant(0), selectedValue: .constant(.confident))
 }

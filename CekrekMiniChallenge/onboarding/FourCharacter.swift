@@ -8,33 +8,41 @@
 import SwiftUI
 
 struct FourCharacter: View {
-    let initialTabIndex: Int
-    @State private var selectedIndex: Int
-    
-    init(initialTabIndex: Int) {
-        self.initialTabIndex = initialTabIndex
-        _selectedIndex = State(initialValue: initialTabIndex) // Initialize the state variable
-    }
-    
+//    let initialTabIndex: Int
+    @State var selectedIndex: Int
+    @State var selectedPose: Int
+    @State var valueSelected : Value
+
     var body: some View {
         NavigationStack {
             VStack {
                 TabView(selection: $selectedIndex) {
-                    ConfidentCharacter()
+                    ConfidentCharacter(selectedPose: $selectedPose, selectedValue: $valueSelected)
                         .tag(0)
-                    StrongCharacter()
+
+                    StrongCharacter(selectedPose: $selectedPose, selectedValue: $valueSelected)
                         .tag(1)
-                    FriendlyCharacter()
+
+                    FriendlyCharacter(selectedPose: $selectedPose, selectedValue: $valueSelected)
                         .tag(2)
-                    GenuineCharacter()
+
+                    GenuineCharacter(selectedPose: $selectedPose, selectedValue: $valueSelected)
                         .tag(3)
+
                 }
                 .tabViewStyle(.page)
                 
-                NavigationLink(destination: ContentView().navigationBarBackButtonHidden(false)) {
+                
+                NavigationLink(destination: CameraCaptureView(pose: selectedPose, value: valueSelected).navigationBarBackButtonHidden(true)) {
                     Text("Next")
                         .modifier(ButtonWhiteTextPurple())
                 }
+                
+
+//                NavigationLink(destination: CobaLagi(value: $valueSelected, image: $selectedPose).navigationBarBackButtonHidden(true)) {
+//                    Text("Next")
+//                        .modifier(ButtonWhiteTextPurple())
+//                }
                 
                 Spacer()
                 Spacer()
@@ -44,12 +52,23 @@ struct FourCharacter: View {
             .ignoresSafeArea()
             .background(Color(red: 17/255, green: 17/255, blue: 17/255))
             .navigationBarHidden(true)
+            .onChange(of: selectedIndex) { 
+                if selectedIndex == 0 {
+                    valueSelected = .confident
+                } else if selectedIndex == 1 {
+                    valueSelected = .strong
+                }else if selectedIndex == 2 {
+                    valueSelected = .friendly
+                }else if selectedIndex == 3 {
+                    valueSelected = .genuine
+                }
+            }
         }
     }
 }
 
 #Preview {
-    FourCharacter(initialTabIndex: 0)
+    FourCharacter(selectedIndex: 0, selectedPose: 0, valueSelected: .confident/*initialTabIndex: 0*/)
 }
 
 

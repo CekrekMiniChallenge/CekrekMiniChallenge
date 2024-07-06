@@ -10,6 +10,8 @@ import SwiftUI
 struct StrongCharacter: View {
     @State private var selectedImage: String = "Wanita1"
     @State private var isTextExpanded: Bool = false
+    @Binding var selectedPose: Int
+    @Binding var selectedValue: Value
 
         var body: some View {
             NavigationStack{
@@ -53,6 +55,8 @@ struct StrongCharacter: View {
                                         .cornerRadius(5)
                                         .onTapGesture {
                                             selectedImage = "Wanita1"
+                                            selectedPose = 0
+                                            selectedValue = .strong
                                         }
                                 }
                                 Spacer()
@@ -64,6 +68,8 @@ struct StrongCharacter: View {
                                     .cornerRadius(5)
                                     .onTapGesture {
                                         selectedImage = "Wanita2"
+                                        selectedPose = 1
+                                        selectedValue = .strong
                                     }
                                 Spacer()
                                 Image("Wanita3")
@@ -74,6 +80,8 @@ struct StrongCharacter: View {
                                     .cornerRadius(5)
                                     .onTapGesture {
                                         selectedImage = "Wanita3"
+                                        selectedPose = 2
+                                        selectedValue = .strong
                                     }
                             }
                             Text("Show your strength with a pose that screams determination and resilience. Stand tall with your shoulders back and feet firmly planted, showing you're solid and steady. A subtle but powerful expression and a focused gaze capture your inner strength and readiness to tackle any challenge.")
@@ -104,5 +112,5 @@ struct StrongCharacter: View {
 }
 
 #Preview {
-    StrongCharacter()
+    StrongCharacter(selectedPose: .constant(0), selectedValue: .constant(.strong))
 }

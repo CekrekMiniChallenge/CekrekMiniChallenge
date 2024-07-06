@@ -12,6 +12,9 @@ import UIKit
 struct CameraCaptureView: View {
     @StateObject var cameraService = CameraService()
     @StateObject var watch = WatchConnectivityManager.shared
+    
+    @State var pose : Int
+    @State var value : Value
 
     @State var capturedImage : UIImage? = nil
     @State var photoPreview : UIImage? = nil
@@ -219,7 +222,7 @@ struct CameraCaptureView: View {
             }
         }
         .sheet(isPresented: $poseShow, content: {
-            PoseModal()
+            PoseModal(pose: pose, value: value)
                 .presentationDetents([.fraction(0.25)])
         })
         .background(.black)
@@ -388,5 +391,5 @@ struct CameraCaptureView: View {
 }
 
 #Preview {
-    CameraCaptureView()
+    CameraCaptureView(pose: 0, value: .confident)
 }

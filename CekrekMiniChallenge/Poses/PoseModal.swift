@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PoseModal: View {
+    @State var pose : Int
+    @State var value : Value
+    
     var body: some View {
         VStack{
             RoundedRectangle(cornerRadius: 10)
@@ -24,5 +27,5 @@ struct PoseModal: View {
 }
 
 #Preview {
-    PoseModal()
+    PoseModal(pose: 0, value: .confident)
 }

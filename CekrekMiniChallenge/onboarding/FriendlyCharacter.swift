@@ -10,6 +10,8 @@ import SwiftUI
 struct FriendlyCharacter: View {
     @State private var selectedImage: String = "Wanita1"
     @State private var isTextExpanded: Bool = false
+    @Binding var selectedPose: Int
+    @Binding var selectedValue: Value
 
         var body: some View {
             NavigationStack{
@@ -53,6 +55,8 @@ struct FriendlyCharacter: View {
                                         .cornerRadius(5)
                                         .onTapGesture {
                                             selectedImage = "Wanita1"
+                                            selectedPose = 0
+                                            selectedValue = .friendly
                                         }
                                 }
                                 Spacer()
@@ -64,6 +68,8 @@ struct FriendlyCharacter: View {
                                     .cornerRadius(5)
                                     .onTapGesture {
                                         selectedImage = "Wanita2"
+                                        selectedPose = 1
+                                        selectedValue = .friendly
                                     }
                                 Spacer()
                                 Image("Wanita3")
@@ -74,6 +80,8 @@ struct FriendlyCharacter: View {
                                     .cornerRadius(5)
                                     .onTapGesture {
                                         selectedImage = "Wanita3"
+                                        selectedPose = 2
+                                        selectedValue = .friendly
                                     }
                             }
                             Text("Be friendly with an open, welcoming posture. Stand or sit in a relaxed way, with your arms comfortably at your sides or slightly open, showing you're approachable. A warm smile and gentle eye contact create a vibe of kindness and genuine interest in connecting with others.")
@@ -104,5 +112,5 @@ struct FriendlyCharacter: View {
 }
 
 #Preview {
-    FriendlyCharacter()
+    FriendlyCharacter(selectedPose: .constant(0), selectedValue: .constant(.friendly))
 }

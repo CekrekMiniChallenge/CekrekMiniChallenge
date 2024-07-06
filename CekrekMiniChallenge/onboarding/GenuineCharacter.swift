@@ -10,6 +10,8 @@ import SwiftUI
 struct GenuineCharacter: View {
     @State private var selectedImage: String = "Wanita1"
     @State private var isTextExpanded: Bool = false
+    @Binding var selectedPose: Int
+    @Binding var selectedValue: Value
     
         var body: some View {
             NavigationStack{
@@ -53,6 +55,7 @@ struct GenuineCharacter: View {
                                         .cornerRadius(5)
                                         .onTapGesture {
                                             selectedImage = "Wanita1"
+                                            selectedValue = .genuine
                                         }
                                 }
                                 Spacer()
@@ -64,6 +67,7 @@ struct GenuineCharacter: View {
                                     .cornerRadius(5)
                                     .onTapGesture {
                                         selectedImage = "Wanita2"
+                                        selectedValue = .genuine
                                     }
                                 Spacer()
                                 Image("Wanita3")
@@ -74,6 +78,7 @@ struct GenuineCharacter: View {
                                     .cornerRadius(5)
                                     .onTapGesture {
                                         selectedImage = "Wanita3"
+                                        selectedValue = .genuine
                                     }
                             }
                             Text("Keep it real with a natural, relaxed pose that reflects your true self. Avoid overly formal or staged positions; go for a comfortable stance or seating arrangement. A sincere smile and expressive eyes show honesty and trustworthiness, leaving a lasting impression of authenticity.")
@@ -104,5 +109,5 @@ struct GenuineCharacter: View {
 }
 
 #Preview {
-    GenuineCharacter()
+    GenuineCharacter(selectedPose: .constant(0), selectedValue: .constant(.genuine))
 }

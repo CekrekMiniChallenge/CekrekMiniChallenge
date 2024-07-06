@@ -18,6 +18,8 @@
 		AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D31F82C2BF15100049334 /* ContentView.swift */; };
 		AB3D31FB2C2BF15200049334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3D31FA2C2BF15200049334 /* Assets.xcassets */; };
 		AB3D31FE2C2BF15200049334 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3D31FD2C2BF15200049334 /* Preview Assets.xcassets */; };
+		AB7729B92C3955DF00AE5111 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7729B82C3955DF00AE5111 /* Pose.swift */; };
+		AB7729BA2C3955DF00AE5111 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7729B82C3955DF00AE5111 /* Pose.swift */; };
 		ABBDB8732C37EB9A00C745D3 /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8652C37EB9A00C745D3 /* CameraCaptureView.swift */; };
 		ABBDB8742C37EB9A00C745D3 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8662C37EB9A00C745D3 /* CameraService.swift */; };
 		ABBDB8752C37EB9A00C745D3 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8672C37EB9A00C745D3 /* CameraView.swift */; };
@@ -74,6 +76,7 @@
 		AB3D31F82C2BF15100049334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AB3D31FA2C2BF15200049334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB3D31FD2C2BF15200049334 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AB7729B82C3955DF00AE5111 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		ABBDB8652C37EB9A00C745D3 /* CameraCaptureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCaptureView.swift; sourceTree = "<group>"; };
 		ABBDB8662C37EB9A00C745D3 /* CameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		ABBDB8672C37EB9A00C745D3 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -123,8 +126,8 @@
 			children = (
 				9F6E3FDF2C35A233006DC145 /* OBcharacterDummy.swift */,
 				9F6E3FE12C35A854006DC145 /* ConfidentCharacter.swift */,
-				9F6E3FE32C35AA5F006DC145 /* StrongCharacter.swift */,
 				9F6E3FE52C35AAEC006DC145 /* FriendlyCharacter.swift */,
+				9F6E3FE32C35AA5F006DC145 /* StrongCharacter.swift */,
 				9F6E3FE72C35AB7C006DC145 /* GenuineCharacter.swift */,
 				9F6E3FE92C35AEB9006DC145 /* FourCharacter.swift */,
 			);
@@ -209,6 +212,7 @@
 			children = (
 				ABBDB8702C37EB9A00C745D3 /* Feature.swift */,
 				ABBDB8712C37EB9A00C745D3 /* Photo.swift */,
+				AB7729B82C3955DF00AE5111 /* Pose.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +353,7 @@
 				ABBDB87C2C37EB9A00C745D3 /* Photo.swift in Sources */,
 				ABBDB8762C37EB9A00C745D3 /* FeaturesButtonView.swift in Sources */,
 				ABBDB87E2C37F65000C745D3 /* WatchConnectivityManager.swift in Sources */,
+				AB7729B92C3955DF00AE5111 /* Pose.swift in Sources */,
 				AB3D31F72C2BF15100049334 /* CekrekMiniChallengeApp.swift in Sources */,
 				9F6E3FDC2C359FCA006DC145 /* ButtonView.swift in Sources */,
 				ABBDB8732C37EB9A00C745D3 /* CameraCaptureView.swift in Sources */,
@@ -361,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB7729BA2C3955DF00AE5111 /* Pose.swift in Sources */,
 				ABBDB8AF2C3901B000C745D3 /* ContentView.swift in Sources */,
 				ABBDB8BC2C3901CF00C745D3 /* WatchConnectivityManager.swift in Sources */,
 				ABBDB8AD2C3901B000C745D3 /* WatchCekrekApp.swift in Sources */,
