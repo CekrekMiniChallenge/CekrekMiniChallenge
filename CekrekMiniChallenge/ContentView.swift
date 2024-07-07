@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding: Bool = false
+    
     var body: some View {
         VStack {
-            OBcharacterDummy()
+            if hasCompletedOnboarding {
+                OBcharacterDummy()
+            }else{
+                OnBoarding()
+            }
 //            CameraCaptureView()
 //            CameraCustomView()
             

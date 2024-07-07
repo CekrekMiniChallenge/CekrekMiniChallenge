@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GenuineCharacter: View {
-    @State private var selectedImage: String = "Wanita1"
+    @State private var selectedImage: String = "Genuine1"
     @State private var isTextExpanded: Bool = false
     @Binding var selectedPose: Int
     @Binding var selectedValue: Value
@@ -47,37 +47,37 @@ struct GenuineCharacter: View {
                             
                             HStack{
                                 VStack {
-                                    Image("Wanita1")
+                                    Image("Genuine1")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 114, height: 114, alignment: .top)
                                         .clipped()
                                         .cornerRadius(5)
                                         .onTapGesture {
-                                            selectedImage = "Wanita1"
+                                            selectedImage = "Genuine1"
                                             selectedValue = .genuine
                                         }
                                 }
                                 Spacer()
-                                Image("Wanita2")
+                                Image("Genuine2")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 114, height: 114, alignment: .top)
                                     .clipped()
                                     .cornerRadius(5)
                                     .onTapGesture {
-                                        selectedImage = "Wanita2"
+                                        selectedImage = "Genuine2"
                                         selectedValue = .genuine
                                     }
                                 Spacer()
-                                Image("Wanita3")
+                                Image("Genuine3")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 114, height: 114, alignment: .top)
                                     .clipped()
                                     .cornerRadius(5)
                                     .onTapGesture {
-                                        selectedImage = "Wanita3"
+                                        selectedImage = "Genuine3"
                                         selectedValue = .genuine
                                     }
                             }

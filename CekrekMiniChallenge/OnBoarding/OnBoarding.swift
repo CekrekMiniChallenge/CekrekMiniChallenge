@@ -7,27 +7,29 @@
 
 import SwiftUI
 
-struct onBoardItems {
-    let image : String
-    let content : String
+struct OnBoardItems {
+    let image: String
+    let content: String
 }
 
 let onBoardingStep = [
-    onBoardItems(image: "onboarding1", content: "Before taking your best picture, let’s find something to hold or prop up your phone & make sure to set your camera straight to your eyes."),
-    onBoardItems(image: "onboarding2", content: "Wear and use your best items that make you feel awesome, and strike a pose!")
+    OnBoardItems(image: "onboarding1", content: "Before taking your best picture, let’s find something to hold or prop up your phone & make sure to set your camera straight to your eyes."),
+    OnBoardItems(image: "onboarding2", content: "Wear and use your best items that make you feel awesome, and strike a pose!")
 ]
 
 struct OnBoarding: View {
     @State var currentStep = 0
+    @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding: Bool = false
     
     var body: some View {
         ZStack{
             TabView(selection: $currentStep){
-                ForEach(0..<onBoardingStep.count){ i in
+                ForEach(0..<onBoardingStep.count, id: \.self) { i in
                     ZStack{
                         Color.blue
+                            .ignoresSafeArea()
                         VStack(spacing: 0){
-                            Image("\(onBoardingStep[i].image)")
+                            Image(onBoardingStep[i].image)
                                 .resizable()
                                 .opacity(0.6)
                                 .scaledToFill()
@@ -39,6 +41,7 @@ struct OnBoarding: View {
                                 }
                             Color.black
                         }
+                        .ignoresSafeArea()
                         
                         VStack{
                             Spacer()
@@ -50,30 +53,50 @@ struct OnBoarding: View {
                                 .multilineTextAlignment(.center)
                                 .padding(.bottom, 150)
                         }
+                        
                     }
                     .tag(i)
-                    .ignoresSafeArea()
                 }
             }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+            .ignoresSafeArea()
             
             VStack{
                 Spacer()
-                Button{
-                    
-                }label: {
+                Button {
+                    if currentStep < onBoardingStep.count - 1 {
+                        withAnimation {
+                            currentStep += 1
+                        }
+                    } else {
+                        hasCompletedOnboarding = true
+                    }
+                } label: {
                     Text(currentStep < onBoardingStep.count - 1 ? "Next" : "Get Started")
-                        .frame(width: 150, height: 20)
-                        .padding(.bottom, 16)
-                        .foregroundStyle(.black)
-                        .font(.title3)
-//                        .frame(maxWidth: .infinity)
-                        .background(.blue)
+                        .modifier(ButtonWhiteTextPurple())
                 }
+                .padding(.bottom, 20)
             }
         }
     }
 }
 
+//@main
+//struct CekrekMiniChallengeApp: App {
+//    @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding: Bool = false
+//    
+//    var body: some Scene {
+//        WindowGroup {
+//            if hasCompletedOnboarding {
+//                ContentView() // Your main content view
+//            } else {
+//                OnBoarding()
+//            }
+//        }
+//    }
+//}
+
 #Preview {
     OnBoarding()
 }
+

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FriendlyCharacter: View {
-    @State private var selectedImage: String = "Wanita1"
+    @State private var selectedImage: String = "Friendly1"
     @State private var isTextExpanded: Bool = false
     @Binding var selectedPose: Int
     @Binding var selectedValue: Value
@@ -47,39 +47,39 @@ struct FriendlyCharacter: View {
                             
                             HStack{
                                 VStack {
-                                    Image("Wanita1")
+                                    Image("Friendly1")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 114, height: 114, alignment: .top)
                                         .clipped()
                                         .cornerRadius(5)
                                         .onTapGesture {
-                                            selectedImage = "Wanita1"
+                                            selectedImage = "Friendly1"
                                             selectedPose = 0
                                             selectedValue = .friendly
                                         }
                                 }
                                 Spacer()
-                                Image("Wanita2")
+                                Image("Friendly2")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 114, height: 114, alignment: .top)
                                     .clipped()
                                     .cornerRadius(5)
                                     .onTapGesture {
-                                        selectedImage = "Wanita2"
+                                        selectedImage = "Friendly2"
                                         selectedPose = 1
                                         selectedValue = .friendly
                                     }
                                 Spacer()
-                                Image("Wanita3")
+                                Image("Friendly3")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 114, height: 114, alignment: .top)
                                     .clipped()
                                     .cornerRadius(5)
                                     .onTapGesture {
-                                        selectedImage = "Wanita3"
+                                        selectedImage = "Friendly3"
                                         selectedPose = 2
                                         selectedValue = .friendly
                                     }

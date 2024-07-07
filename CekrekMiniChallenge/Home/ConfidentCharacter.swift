@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ConfidentCharacter: View {
-    @State private var selectedImage: String = "Wanita1"
+    @State private var selectedImage: String = "Confident1"
     @Binding var selectedPose: Int
     @Binding var selectedValue: Value
 
@@ -46,39 +46,39 @@ struct ConfidentCharacter: View {
                             
                             HStack{
                                 VStack {
-                                    Image("Wanita1")
+                                    Image("Confident1")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 114, height: 114, alignment: .top)
                                         .clipped()
                                         .cornerRadius(5)
                                         .onTapGesture {
-                                            selectedImage = "Wanita1"
+                                            selectedImage = "Confident1"
                                             selectedPose = 0
                                             selectedValue = .confident
                                         }
                                 }
                                 Spacer()
-                                Image("Wanita2")
+                                Image("Confident2")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 114, height: 114, alignment: .top)
                                     .clipped()
                                     .cornerRadius(5)
                                     .onTapGesture {
-                                        selectedImage = "Wanita2"
+                                        selectedImage = "Confident2"
                                         selectedPose = 1
                                         selectedValue = .confident
                                     }
                                 Spacer()
-                                Image("Wanita3")
+                                Image("Confident3")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 114, height: 114, alignment: .top)
                                     .clipped()
                                     .cornerRadius(5)
                                     .onTapGesture {
-                                        selectedImage = "Wanita3"
+                                        selectedImage = "Confident3"
                                         selectedPose = 2
                                         selectedValue = .confident
                                     }

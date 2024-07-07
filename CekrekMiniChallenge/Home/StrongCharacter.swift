@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StrongCharacter: View {
-    @State private var selectedImage: String = "Wanita1"
+    @State private var selectedImage: String = "Strong1"
     @State private var isTextExpanded: Bool = false
     @Binding var selectedPose: Int
     @Binding var selectedValue: Value
@@ -47,39 +47,39 @@ struct StrongCharacter: View {
                             
                             HStack{
                                 VStack {
-                                    Image("Wanita1")
+                                    Image("Strong1")
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 114, height: 114, alignment: .top)
                                         .clipped()
                                         .cornerRadius(5)
                                         .onTapGesture {
-                                            selectedImage = "Wanita1"
+                                            selectedImage = "Strong1"
                                             selectedPose = 0
                                             selectedValue = .strong
                                         }
                                 }
                                 Spacer()
-                                Image("Wanita2")
+                                Image("Strong2")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 114, height: 114, alignment: .top)
                                     .clipped()
                                     .cornerRadius(5)
                                     .onTapGesture {
-                                        selectedImage = "Wanita2"
+                                        selectedImage = "Strong2"
                                         selectedPose = 1
                                         selectedValue = .strong
                                     }
                                 Spacer()
-                                Image("Wanita3")
+                                Image("Strong3")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 114, height: 114, alignment: .top)
                                     .clipped()
                                     .cornerRadius(5)
                                     .onTapGesture {
-                                        selectedImage = "Wanita3"
+                                        selectedImage = "Strong3"
                                         selectedPose = 2
                                         selectedValue = .strong
                                     }
