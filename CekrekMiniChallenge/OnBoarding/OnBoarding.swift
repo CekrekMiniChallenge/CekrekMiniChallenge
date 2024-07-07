@@ -26,12 +26,12 @@ struct OnBoarding: View {
             TabView(selection: $currentStep){
                 ForEach(0..<onBoardingStep.count, id: \.self) { i in
                     ZStack{
-                        Color.blue
+                        Color.teal
                             .ignoresSafeArea()
                         VStack(spacing: 0){
                             Image(onBoardingStep[i].image)
                                 .resizable()
-                                .opacity(0.6)
+                                .opacity(0.7)
                                 .scaledToFill()
                                 .overlay{
                                     LinearGradient(stops: [

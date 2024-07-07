@@ -39,7 +39,7 @@ struct ButtonWhiteTextPurple: ViewModifier {
             .foregroundStyle(.black)
             .fontWeight(.bold)
             .frame(maxWidth: 360, maxHeight:50)
-            .background(.blue)
+            .background(.teal)
             .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }

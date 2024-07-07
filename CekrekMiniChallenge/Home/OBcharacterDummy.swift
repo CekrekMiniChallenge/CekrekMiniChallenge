@@ -72,7 +72,7 @@ struct OBcharacterDummy: View {
                         ZStack {
                             
                             VStack {
-                                LinearGradient(colors: [.blue, .black], startPoint: .top, endPoint: .center)
+                                LinearGradient(colors: [.teal, .black], startPoint: .top, endPoint: .center)
                             }
                             
 //                            VStack{
