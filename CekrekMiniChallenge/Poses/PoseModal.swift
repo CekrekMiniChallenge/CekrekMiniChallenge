@@ -8,24 +8,31 @@
 import SwiftUI
 
 struct PoseModal: View {
-    @State var pose : Int
-    @State var value : Value
+    @Binding var pose : Int
+    @Binding var value : Value
     
     var body: some View {
-        VStack{
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/,height: 5)
-                .foregroundColor(.white.opacity(0.5))
-                .padding(.top, 3)
+        ZStack{
+            Color.black
+                .ignoresSafeArea()
             
-            HStack{
+            VStack{
+                RoundedRectangle(cornerRadius: 10)
+                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/,height: 5)
+                    .foregroundColor(.white.opacity(0.5))
+                    .padding(.top, 3)
+                    .padding(.bottom, 25)
                 
+                HStack{
+                    PoseGrid(value: value, pose: $pose)
+                        .padding(.horizontal)
+                }
+                Spacer()
             }
-            Spacer()
         }
     }
 }
 
 #Preview {
-    PoseModal(pose: 0, value: .confident)
+    PoseModal(pose: .constant(0), value: .constant(.confident))
 }

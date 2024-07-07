@@ -40,12 +40,25 @@ struct CameraCaptureView: View {
                 .offset(y: -60)
                 .ignoresSafeArea()
             
+            PoseView(image: value.imgOutline[pose])
+            
+//            if value == .confident{
+//                PoseView(image: value.imgSample[pose])
+//            } else if value == .strong{
+//                PoseView(image: "ConfidentOutline1")
+//            }else if value == .friendly{
+//                PoseView(image: "ConfidentOutline1")
+//            }else if Value == .genuine{
+//                PoseView(image: "ConfidentOutline1")
+//            }
+            
 //            if showFlash {
 //                Color.white
 //                    .edgesIgnoringSafeArea(.all)
 //                    .opacity(showFlash ? 1 : 0)
 //                    .animation(.easeInOut(duration: 0.1), value: showFlash)
 //            }
+            
             
             if cameraService.photoCaptured {
                 Color.black
@@ -222,7 +235,7 @@ struct CameraCaptureView: View {
             }
         }
         .sheet(isPresented: $poseShow, content: {
-            PoseModal(pose: pose, value: value)
+            PoseModal(pose: $pose, value: $value)
                 .presentationDetents([.fraction(0.25)])
         })
         .background(.black)

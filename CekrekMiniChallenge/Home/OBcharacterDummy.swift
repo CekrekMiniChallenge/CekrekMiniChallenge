@@ -62,7 +62,7 @@ struct ExpandableRoundedRectangle: View {
 
 struct OBcharacterDummy: View {
     @State private var expandedIndex: Int? = nil
-    @State var valueSelected : Value
+    @State var valueSelected : Value = .confident
     
     var body: some View {
         NavigationView {
@@ -75,20 +75,20 @@ struct OBcharacterDummy: View {
                                 LinearGradient(colors: [.blue, .black], startPoint: .top, endPoint: .center)
                             }
                             
-                            VStack{
-                                if valueSelected == .confident{
-                                    Text("confident")
-                                }else if valueSelected == .friendly{
-                                    Text("friendly")
-                                }else if valueSelected == .genuine{
-                                    Text("genuine")
-                                }else if valueSelected == .strong{
-                                    Text("strong")
-                                }else{
-                                    Text("gtw")
-                                }
-                                Spacer()
-                            }
+//                            VStack{
+//                                if valueSelected == .confident{
+//                                    Text("confident")
+//                                }else if valueSelected == .friendly{
+//                                    Text("friendly")
+//                                }else if valueSelected == .genuine{
+//                                    Text("genuine")
+//                                }else if valueSelected == .strong{
+//                                    Text("strong")
+//                                }else{
+//                                    Text("gtw")
+//                                }
+//                                Spacer()
+//                            }
                             
                             VStack {
                                 Spacer()

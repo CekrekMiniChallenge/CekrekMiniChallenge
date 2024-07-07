@@ -20,6 +20,10 @@
 		AB3D31FE2C2BF15200049334 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3D31FD2C2BF15200049334 /* Preview Assets.xcassets */; };
 		AB7729B92C3955DF00AE5111 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7729B82C3955DF00AE5111 /* Pose.swift */; };
 		AB7729BA2C3955DF00AE5111 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7729B82C3955DF00AE5111 /* Pose.swift */; };
+		AB7729C12C39AEB900AE5111 /* PoseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7729C02C39AEB900AE5111 /* PoseItem.swift */; };
+		AB7729C32C39B0E000AE5111 /* PoseGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7729C22C39B0E000AE5111 /* PoseGrid.swift */; };
+		AB7729C52C3A215C00AE5111 /* PoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7729C42C3A215C00AE5111 /* PoseView.swift */; };
+		AB7729C82C3A2C1B00AE5111 /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7729C72C3A2C1B00AE5111 /* OnBoarding.swift */; };
 		ABBDB8732C37EB9A00C745D3 /* CameraCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8652C37EB9A00C745D3 /* CameraCaptureView.swift */; };
 		ABBDB8742C37EB9A00C745D3 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8662C37EB9A00C745D3 /* CameraService.swift */; };
 		ABBDB8752C37EB9A00C745D3 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBDB8672C37EB9A00C745D3 /* CameraView.swift */; };
@@ -77,6 +81,10 @@
 		AB3D31FA2C2BF15200049334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB3D31FD2C2BF15200049334 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AB7729B82C3955DF00AE5111 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
+		AB7729C02C39AEB900AE5111 /* PoseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseItem.swift; sourceTree = "<group>"; };
+		AB7729C22C39B0E000AE5111 /* PoseGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseGrid.swift; sourceTree = "<group>"; };
+		AB7729C42C3A215C00AE5111 /* PoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseView.swift; sourceTree = "<group>"; };
+		AB7729C72C3A2C1B00AE5111 /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
 		ABBDB8652C37EB9A00C745D3 /* CameraCaptureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCaptureView.swift; sourceTree = "<group>"; };
 		ABBDB8662C37EB9A00C745D3 /* CameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		ABBDB8672C37EB9A00C745D3 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -121,7 +129,7 @@
 			path = components;
 			sourceTree = "<group>";
 		};
-		9F6E3FDE2C35A19B006DC145 /* onboarding */ = {
+		9F6E3FDE2C35A19B006DC145 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				9F6E3FDF2C35A233006DC145 /* OBcharacterDummy.swift */,
@@ -131,7 +139,7 @@
 				9F6E3FE72C35AB7C006DC145 /* GenuineCharacter.swift */,
 				9F6E3FE92C35AEB9006DC145 /* FourCharacter.swift */,
 			);
-			path = onboarding;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		AB3D31EA2C2BF15100049334 = {
@@ -161,7 +169,8 @@
 				ABBDB8722C37EB9A00C745D3 /* Model */,
 				ABBDB86F2C37EB9A00C745D3 /* Poses */,
 				9F6E3FDA2C359E60006DC145 /* components */,
-				9F6E3FDE2C35A19B006DC145 /* onboarding */,
+				AB7729C62C3A2BEF00AE5111 /* OnBoarding */,
+				9F6E3FDE2C35A19B006DC145 /* Home */,
 				AB3D31F62C2BF15100049334 /* CekrekMiniChallengeApp.swift */,
 				AB3D31F82C2BF15100049334 /* ContentView.swift */,
 				AB3D31FA2C2BF15200049334 /* Assets.xcassets */,
@@ -176,6 +185,14 @@
 				AB3D31FD2C2BF15200049334 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB7729C62C3A2BEF00AE5111 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				AB7729C72C3A2C1B00AE5111 /* OnBoarding.swift */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 		ABBDB8682C37EB9A00C745D3 /* Camera */ = {
@@ -202,7 +219,10 @@
 		ABBDB86F2C37EB9A00C745D3 /* Poses */ = {
 			isa = PBXGroup;
 			children = (
+				AB7729C42C3A215C00AE5111 /* PoseView.swift */,
 				ABBDB86E2C37EB9A00C745D3 /* PoseModal.swift */,
+				AB7729C02C39AEB900AE5111 /* PoseItem.swift */,
+				AB7729C22C39B0E000AE5111 /* PoseGrid.swift */,
 			);
 			path = Poses;
 			sourceTree = "<group>";
@@ -345,16 +365,20 @@
 				9F6E3FE62C35AAEC006DC145 /* FriendlyCharacter.swift in Sources */,
 				ABBDB8782C37EB9A00C745D3 /* PoseButton.swift in Sources */,
 				ABBDB87B2C37EB9A00C745D3 /* Feature.swift in Sources */,
+				AB7729C32C39B0E000AE5111 /* PoseGrid.swift in Sources */,
 				9F6E3FEA2C35AEB9006DC145 /* FourCharacter.swift in Sources */,
 				AB3D31F92C2BF15100049334 /* ContentView.swift in Sources */,
 				9F6E3FE22C35A854006DC145 /* ConfidentCharacter.swift in Sources */,
 				ABBDB8792C37EB9A00C745D3 /* TimerButton.swift in Sources */,
 				ABBDB8772C37EB9A00C745D3 /* FlashButton.swift in Sources */,
 				ABBDB87C2C37EB9A00C745D3 /* Photo.swift in Sources */,
+				AB7729C82C3A2C1B00AE5111 /* OnBoarding.swift in Sources */,
+				AB7729C12C39AEB900AE5111 /* PoseItem.swift in Sources */,
 				ABBDB8762C37EB9A00C745D3 /* FeaturesButtonView.swift in Sources */,
 				ABBDB87E2C37F65000C745D3 /* WatchConnectivityManager.swift in Sources */,
 				AB7729B92C3955DF00AE5111 /* Pose.swift in Sources */,
 				AB3D31F72C2BF15100049334 /* CekrekMiniChallengeApp.swift in Sources */,
+				AB7729C52C3A215C00AE5111 /* PoseView.swift in Sources */,
 				9F6E3FDC2C359FCA006DC145 /* ButtonView.swift in Sources */,
 				ABBDB8732C37EB9A00C745D3 /* CameraCaptureView.swift in Sources */,
 				ABBDB87A2C37EB9A00C745D3 /* PoseModal.swift in Sources */,
