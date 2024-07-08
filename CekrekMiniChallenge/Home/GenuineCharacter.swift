@@ -55,6 +55,7 @@ struct GenuineCharacter: View {
                                         .cornerRadius(5)
                                         .onTapGesture {
                                             selectedImage = "Genuine1"
+                                            selectedPose = 0
                                             selectedValue = .genuine
                                         }
                                 }
@@ -67,6 +68,7 @@ struct GenuineCharacter: View {
                                     .cornerRadius(5)
                                     .onTapGesture {
                                         selectedImage = "Genuine2"
+                                        selectedPose = 1
                                         selectedValue = .genuine
                                     }
                                 Spacer()
@@ -78,6 +80,7 @@ struct GenuineCharacter: View {
                                     .cornerRadius(5)
                                     .onTapGesture {
                                         selectedImage = "Genuine3"
+                                        selectedPose = 2
                                         selectedValue = .genuine
                                     }
                             }
